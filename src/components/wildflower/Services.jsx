@@ -1,4 +1,4 @@
-import { Scissors, Palette, Sparkles, Leaf } from "lucide-react";
+import { Scissors, Palette, Sparkles, Leaf, Clock } from "lucide-react";
 import { siteConfig } from "@/lib/siteConfig";
 
 const services = [
@@ -6,29 +6,51 @@ const services = [
     name: "Precision Cuts",
     description:
       "Bespoke cuts sculpted to your face shape, texture, and vibe. Every snip is intentional.",
-    priceRange: "$65+",
     Icon: Scissors,
+    items: [
+      { label: "Women's Cut & Style", price: "$65+", duration: "60 min" },
+      { label: "Men's Cut", price: "$40+", duration: "45 min" },
+      { label: "Trim & Dust", price: "$35+", duration: "30 min" },
+      { label: "Kids Cut (under 12)", price: "$30+", duration: "30 min" },
+    ],
   },
   {
     name: "Living Color",
     description:
       "Balayage, dimensional highlights, and bold transformations that grow out beautifully.",
-    priceRange: "$120+",
     Icon: Palette,
+    items: [
+      { label: "Full Balayage", price: "$200+", duration: "3 hrs" },
+      { label: "Partial Balayage", price: "$150+", duration: "2.5 hrs" },
+      { label: "Full Highlights", price: "$160+", duration: "2.5 hrs" },
+      { label: "Root Touch-Up", price: "$120+", duration: "2 hrs" },
+      { label: "All-Over Color", price: "$100+", duration: "2 hrs" },
+      { label: "Toner / Gloss", price: "$45+", duration: "30 min" },
+    ],
   },
   {
     name: "Editorial Styling",
     description:
       "Blowouts, updos, and occasion styling that turn heads and hold all day.",
-    priceRange: "$55+",
     Icon: Sparkles,
+    items: [
+      { label: "Blowout", price: "$55+", duration: "45 min" },
+      { label: "Special Occasion Updo", price: "$85+", duration: "60 min" },
+      { label: "Bridal Styling", price: "$120+", duration: "90 min" },
+      { label: "Iron Curls / Waves", price: "$45+", duration: "30 min" },
+    ],
   },
   {
     name: "Restorative Care",
     description:
       "Deep conditioning, bond-building, and gloss treatments for hair that glows with health.",
-    priceRange: "$45+",
     Icon: Leaf,
+    items: [
+      { label: "Deep Conditioning Mask", price: "$45+", duration: "30 min" },
+      { label: "Olaplex Bond Building", price: "$50+", duration: "30 min" },
+      { label: "Clear Gloss Treatment", price: "$55+", duration: "45 min" },
+      { label: "K18 Repair Treatment", price: "$60+", duration: "30 min" },
+    ],
   },
 ];
 
@@ -54,16 +76,17 @@ export default function Services() {
           <h2 className="font-display text-4xl md:text-6xl text-umber leading-tight max-w-2xl">
             What she does, <span className="italic text-terra">wildly well.</span>
           </h2>
+          <p className="font-body text-umber/60 mt-4 max-w-xl text-base">
+            Pricing varies based on hair length, density, and complexity. Your
+            final quote is confirmed at consultation.
+          </p>
         </div>
 
-        {/* Filmstrip on mobile → grid on desktop */}
-        <div className="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-4 md:overflow-visible md:pb-0">
+        {/* Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, idx) => (
-            <div
-              key={idx}
-              className="group flex-shrink-0 w-[85vw] sm:w-[320px] md:w-auto snap-center"
-            >
-              <div className="relative h-full bg-white rounded-3xl p-8 md:p-9 border border-peony/30 transition-all duration-500 hover:border-terra hover:shadow-2xl hover:shadow-terra/10 hover:-translate-y-1.5 overflow-hidden">
+            <div key={idx} className="group flex-shrink-0">
+              <div className="relative h-full bg-white rounded-3xl p-8 border border-peony/30 transition-all duration-500 hover:border-terra hover:shadow-2xl hover:shadow-terra/10 hover:-translate-y-1.5 overflow-hidden flex flex-col">
                 {/* Teal accent bar */}
                 <div className="absolute top-0 left-0 w-full h-1 bg-terra scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
 
@@ -74,23 +97,48 @@ export default function Services() {
                     strokeWidth={1.5}
                   />
                 </div>
-                <h3 className="font-display text-2xl md:text-3xl text-umber mb-3">
+                <h3 className="font-display text-2xl md:text-3xl text-umber mb-2">
                   {service.name}
                 </h3>
                 <p className="font-body text-umber/60 text-sm leading-relaxed mb-6">
                   {service.description}
                 </p>
-                <div className="flex items-center justify-between pt-4 border-t border-peony/20">
-                  <span className="font-label text-sm tracking-[0.1em] uppercase text-terra font-semibold">
-                    {service.priceRange}
-                  </span>
-                  <button
-                    onClick={handleBook}
-                    className="font-label text-[10px] tracking-[0.2em] uppercase text-umber/50 group-hover:text-terra transition-colors duration-300 cursor-pointer font-semibold min-h-[48px] flex items-center"
-                  >
-                    Book →
-                  </button>
+
+                {/* Service breakdown */}
+                <div className="mt-auto space-y-3 mb-6">
+                  {service.items.map((item, i) => (
+                    <div
+                      key={i}
+                      className="border-b border-peony/20 pb-3 last:border-0 last:pb-0"
+                    >
+                      <div className="flex items-start justify-between gap-2">
+                        <p className="font-body text-sm text-umber/80 leading-tight">
+                          {item.label}
+                        </p>
+                        <span className="font-label text-sm tracking-[0.05em] text-terra font-semibold whitespace-nowrap">
+                          {item.price}
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-1 mt-1">
+                        <Clock
+                          className="text-umber/40"
+                          size={11}
+                          strokeWidth={1.5}
+                        />
+                        <span className="font-body text-[11px] text-umber/50">
+                          {item.duration}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
                 </div>
+
+                <button
+                  onClick={handleBook}
+                  className="font-label text-[10px] tracking-[0.2em] uppercase text-umber/50 group-hover:text-terra transition-colors duration-300 cursor-pointer font-semibold min-h-[48px] flex items-center w-full border-t border-peony/20 pt-4"
+                >
+                  Book →
+                </button>
               </div>
             </div>
           ))}
