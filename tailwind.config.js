@@ -60,11 +60,11 @@ module.exports = {
   				border: 'hsl(var(--sidebar-border))',
   				ring: 'hsl(var(--sidebar-ring))'
   				},
-  				silk: '#FDF9F6',
-  				umber: '#3A2E29',
-  				terra: '#9E6B55',
-  				peony: '#D8B4A0',
-  				moss: '#6B705C'
+  				silk: '#FBFCFC',
+  				umber: '#1A1A1A',
+  				terra: '#2E97B5',
+  				peony: '#D0E8EF',
+  				moss: '#5A9BAA'
   				},
   		fontFamily: {
   			heading: ['var(--font-heading)'],

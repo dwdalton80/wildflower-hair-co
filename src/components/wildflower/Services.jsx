@@ -40,7 +40,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative py-24 md:py-40 bg-gradient-to-b from-silk via-silk to-[#f3f5f0] scroll-mt-20 overflow-hidden"
+      className="relative py-24 md:py-40 bg-gradient-to-b from-silk via-silk to-[#eff5f7] scroll-mt-20 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}

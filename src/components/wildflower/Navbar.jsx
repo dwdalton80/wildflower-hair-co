@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import BookNowButton from "./BookNowButton";
+import { siteConfig } from "@/lib/siteConfig";
 
 const navLinks = [
   { label: "Services", href: "#services" },
@@ -40,13 +41,15 @@ export default function Navbar() {
           {/* Logo */}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="flex items-baseline gap-1.5 cursor-pointer"
+            className="flex items-center gap-2.5 cursor-pointer"
           >
-            <span className="font-display text-2xl italic text-umber leading-none">
-              Wildflower
-            </span>
-            <span className="font-label text-[10px] tracking-[0.2em] uppercase text-terra leading-none">
-              Hair Co.
+            <img
+              src={siteConfig.logoUrl}
+              alt="Wildflower Hair Co. By Kyia"
+              className="w-10 h-10 md:w-11 md:h-11 rounded-full object-cover ring-1 ring-peony/40"
+            />
+            <span className="font-display text-xl md:text-2xl italic text-umber leading-none">
+              Wildflower Hair Co.
             </span>
           </button>
 

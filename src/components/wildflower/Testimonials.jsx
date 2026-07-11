@@ -27,7 +27,7 @@ export default function Testimonials() {
   return (
     <section
       id="reviews"
-      className="py-24 md:py-40 bg-gradient-to-b from-silk to-[#faf6f2] scroll-mt-20 overflow-hidden"
+      className="py-24 md:py-40 bg-gradient-to-b from-silk to-[#f5fafb] scroll-mt-20 overflow-hidden"
     >
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16 md:mb-24">

@@ -7,18 +7,18 @@ export default function Hero({ heroImage }) {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-24 overflow-hidden bg-gradient-to-br from-silk via-[#faf5f0] to-[#f5f0eb]"
+      className="relative min-h-screen flex items-center pt-24 overflow-hidden bg-gradient-to-br from-silk via-[#f5fafb] to-[#eff5f7]"
     >
       {/* Decorative shadow leaves */}
       <ShadowLeaf
         className="w-[400px] h-[600px] -top-20 -left-32"
-        color="#D8B4A0"
-        opacity={0.05}
+        color="#D0E8EF"
+        opacity={0.06}
         duration={180}
       />
       <ShadowLeaf
         className="w-[300px] h-[450px] bottom-0 right-10"
-        color="#9E6B55"
+        color="#2E97B5"
         opacity={0.04}
         duration={140}
       />

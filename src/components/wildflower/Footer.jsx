@@ -19,13 +19,20 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-center md:text-left">
-            <div className="flex items-baseline gap-1.5 justify-center md:justify-start">
-              <span className="font-display text-xl italic text-silk">
-                Wildflower
-              </span>
-              <span className="font-label text-[9px] tracking-[0.2em] uppercase text-peony">
-                Hair Co.
-              </span>
+            <div className="flex items-center gap-2.5 justify-center md:justify-start">
+              <img
+                src={siteConfig.logoUrl}
+                alt="Wildflower Hair Co. By Kyia"
+                className="w-9 h-9 rounded-full object-cover ring-1 ring-peony/20"
+              />
+              <div className="flex flex-col">
+                <span className="font-display text-lg italic text-silk leading-none">
+                  Wildflower Hair Co.
+                </span>
+                <span className="font-label text-[8px] tracking-[0.2em] uppercase text-peony mt-0.5">
+                  By Kyia
+                </span>
+              </div>
             </div>
             <p className="font-body text-xs text-silk/40 mt-2">
               The Art of Growth
