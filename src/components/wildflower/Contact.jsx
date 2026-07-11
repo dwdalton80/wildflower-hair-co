@@ -95,7 +95,7 @@ export default function Contact() {
             Book Your Spot
           </BookNowButton>
           <p className="font-body text-xs text-silk/60 mt-4">
-            Booking powered by Square
+            Booking powered by GlossGenius
           </p>
         </div>
 
