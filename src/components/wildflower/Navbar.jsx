@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import BookNowButton from "./BookNowButton";
 import { siteConfig } from "@/lib/siteConfig";
+import { smoothScrollTo } from "@/lib/smoothScroll";
 
 const navLinks = [
   { label: "Services", href: "#services" },
@@ -24,7 +25,7 @@ export default function Navbar() {
 
   const handleNavClick = (href) => {
     setMenuOpen(false);
-    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+    smoothScrollTo(href);
   };
 
   return (

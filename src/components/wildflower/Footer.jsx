@@ -1,5 +1,6 @@
 import { Facebook } from "lucide-react";
 import { siteConfig } from "@/lib/siteConfig";
+import { smoothScrollTo } from "@/lib/smoothScroll";
 
 const footerLinks = [
   { label: "Services", href: "#services" },
@@ -11,7 +12,7 @@ const footerLinks = [
 
 export default function Footer() {
   const handleNavClick = (href) => {
-    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+    smoothScrollTo(href);
   };
 
   return (
