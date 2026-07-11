@@ -47,29 +47,28 @@ export default function About({ aboutImage }) {
             </span>
           </div>
           <h2 className="font-display text-4xl md:text-5xl text-umber leading-tight mb-8">
-            Fresh eyes,
+            Rooted in grace.
             <br />
-            <span className="italic text-terra">intentional hands.</span>
+            <span className="italic text-terra">Blooming in beauty.</span>
           </h2>
           <div className="font-body text-umber/70 text-lg leading-relaxed space-y-5">
             <p>
               Like a wildflower finding its place in the sun, Kyia discovered
-              her calling in the art of hair. As a newly licensed cosmetologist,
-              she brings fresh energy and an intentional touch to every chair
-              she sits behind.
+              her calling in the art of hair. Rooted in grace and blooming in
+              beauty, she brings an intentional touch to every chair she sits
+              behind.
             </p>
             <p>
               Under the name{" "}
               <span className="font-display italic text-terra font-medium">
                 Wildflower Hair Co.
               </span>
-              , she blends botanical inspiration with meticulous technique —
+              , she specializes in blondes, brunettes, and dimensional color —
               believing the best transformations grow naturally, never forced.
             </p>
             <p>
-              Now bringing her craft to {siteConfig.salonName}, Kyia invites you
-              to experience hair care that feels less like an appointment and
-              more like a ritual.
+              Your hair, but wilder. Kyia invites you to experience hair care
+              that feels less like an appointment and more like a ritual.
             </p>
           </div>
         </motion.div>

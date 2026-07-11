@@ -18,13 +18,12 @@ export default function Contact() {
             <span className="w-10 h-px bg-terra/60" />
           </div>
           <h2 className="font-display text-4xl md:text-6xl text-silk leading-tight">
-            Let's create
+            Your hair,
             <br />
-            <span className="italic">something beautiful.</span>
+            <span className="italic text-terra">but wilder.</span>
           </h2>
           <p className="font-body text-silk/80 mt-6 max-w-xl mx-auto text-lg">
-            Book your appointment with Kyia at {siteConfig.salonName} and let
-            your hair tell its story.
+            Book your appointment with Kyia and let your hair bloom.
           </p>
         </div>
 

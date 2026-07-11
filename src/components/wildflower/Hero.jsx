@@ -32,7 +32,7 @@ export default function Hero({ heroImage }) {
           >
             <span className="w-10 h-px bg-terra" />
             <span className="font-label text-[11px] tracking-[0.25em] uppercase text-terra font-semibold">
-              Wildflower Hair Co.
+              Wildflower Hair Co. by Kyia
             </span>
           </motion.div>
 
@@ -40,23 +40,41 @@ export default function Hero({ heroImage }) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.2 }}
-            className="font-display text-6xl md:text-8xl lg:text-[7.5rem] text-umber leading-[0.88] mb-8"
+            className="font-display text-6xl md:text-8xl lg:text-[7.5rem] text-umber leading-[0.88] mb-6"
             style={{ letterSpacing: "-0.03em" }}
           >
-            The art of
+            Your hair,
             <br />
-            <span className="italic text-terra">good hair.</span>
+            <span className="italic text-terra">but wilder.</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="font-body text-umber/70 text-lg md:text-xl leading-relaxed mb-10 max-w-lg mx-auto md:mx-0"
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="font-display text-2xl md:text-3xl italic text-umber/80 leading-relaxed mb-4"
           >
-            Precision cuts, living color, and editorial styling by Kyia — a
-            fresh take on hair, grown intentionally.
+            Rooted in grace. Blooming in beauty.
           </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.55 }}
+            className="flex items-center gap-3 mb-10 justify-center md:justify-start"
+          >
+            <span className="font-label text-[11px] tracking-[0.2em] uppercase text-umber/60 font-semibold">
+              Blondes
+            </span>
+            <span className="text-terra text-xs">•</span>
+            <span className="font-label text-[11px] tracking-[0.2em] uppercase text-umber/60 font-semibold">
+              Brunettes
+            </span>
+            <span className="text-terra text-xs">•</span>
+            <span className="font-label text-[11px] tracking-[0.2em] uppercase text-umber/60 font-semibold">
+              Dimension
+            </span>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}

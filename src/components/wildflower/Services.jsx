@@ -52,7 +52,7 @@ export default function Services() {
             </span>
           </div>
           <h2 className="font-display text-4xl md:text-6xl text-umber leading-tight max-w-2xl">
-            What she does, <span className="italic text-terra">beautifully.</span>
+            What she does, <span className="italic text-terra">wildly well.</span>
           </h2>
         </div>
 

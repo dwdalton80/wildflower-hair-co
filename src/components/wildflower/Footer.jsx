@@ -36,7 +36,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="font-body text-sm text-silk/50 mt-3">
-              The Art of Growth
+              Rooted in grace. Blooming in beauty.
             </p>
           </div>
 
