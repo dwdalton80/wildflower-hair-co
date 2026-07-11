@@ -10,6 +10,6 @@ export const siteConfig = {
   salonName: "[Salon Name]",
   salonAddress: "[Address — to be updated]",
   salonCity: "[City, State]",
-  phone: "[Phone Number]",
+  phone: "580-980-0808",
   email: "hello@wildflowerhairco.com",
 };
