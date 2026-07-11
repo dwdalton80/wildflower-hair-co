@@ -67,7 +67,7 @@ export default function Portfolio() {
                 "",
                 "row-span-2",
                 "",
-                "col-span-2",
+                "",
                 "",
                 "",
               ];
