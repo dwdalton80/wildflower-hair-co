@@ -11,7 +11,7 @@ import StickyBookBar from "@/components/wildflower/StickyBookBar";
 const HERO_IMAGE =
   "https://media.base44.com/images/public/6a5255ae151d27a36fddeb7b/9c7f7b38f_f1c67202-fac4-4a38-bb25-fdbfa9aebcfa.jpg";
 const ABOUT_IMAGE =
-  "https://media.base44.com/images/public/6a5255ae151d27a36fddeb7b/63bf2223d_generated_image.png";
+  "https://media.base44.com/images/public/6a5255ae151d27a36fddeb7b/8c5b38c56_IMG_3517.jpg";
 
 export default function Home() {
   return (
