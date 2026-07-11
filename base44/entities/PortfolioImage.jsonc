@@ -1,0 +1,39 @@
+{
+  "name": "PortfolioImage",
+  "type": "object",
+  "properties": {
+    "image_url": {
+      "type": "string",
+      "format": "uri",
+      "title": "Image URL"
+    },
+    "before_image_url": {
+      "type": "string",
+      "format": "uri",
+      "title": "Before Image URL"
+    },
+    "caption": {
+      "type": "string",
+      "title": "Caption"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "cut",
+        "color",
+        "style",
+        "transformation"
+      ],
+      "default": "style",
+      "title": "Category"
+    },
+    "display_order": {
+      "type": "integer",
+      "default": 0,
+      "title": "Display Order"
+    }
+  },
+  "required": [
+    "image_url"
+  ]
+}

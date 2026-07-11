@@ -59,12 +59,18 @@ module.exports = {
   				'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
   				border: 'hsl(var(--sidebar-border))',
   				ring: 'hsl(var(--sidebar-ring))'
-  			}
-  		},
+  				},
+  				silk: '#FDF9F6',
+  				umber: '#3A2E29',
+  				terra: '#9E6B55',
+  				peony: '#D8B4A0',
+  				moss: '#6B705C'
+  				},
   		fontFamily: {
   			heading: ['var(--font-heading)'],
   			body: ['var(--font-body)'],
   			display: ['var(--font-display)'],
+  			label: ['var(--font-label)'],
   			mono: ['var(--font-mono)']
   		},
   		keyframes: {

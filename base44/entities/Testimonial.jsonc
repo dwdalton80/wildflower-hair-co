@@ -1,0 +1,34 @@
+{
+  "name": "Testimonial",
+  "type": "object",
+  "properties": {
+    "client_name": {
+      "type": "string",
+      "title": "Client Name"
+    },
+    "quote": {
+      "type": "string",
+      "title": "Quote"
+    },
+    "rating": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5,
+      "default": 5,
+      "title": "Star Rating"
+    },
+    "service": {
+      "type": "string",
+      "title": "Service Received"
+    },
+    "display_order": {
+      "type": "integer",
+      "default": 0,
+      "title": "Display Order"
+    }
+  },
+  "required": [
+    "client_name",
+    "quote"
+  ]
+}
