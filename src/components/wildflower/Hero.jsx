@@ -31,7 +31,7 @@ export default function Hero({ heroImage }) {
             className="inline-flex items-center gap-3 mb-8"
           >
             <span className="w-10 h-px bg-terra" />
-            <span className="font-label text-[11px] tracking-[0.25em] uppercase text-terra font-semibold">
+            <span className="font-script text-lg text-terra leading-none">
               Wildflower Hair Co. by Kyia
             </span>
           </motion.div>

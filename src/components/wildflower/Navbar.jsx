@@ -50,7 +50,7 @@ export default function Navbar() {
               className="w-14 h-14 md:w-16 md:h-16 rounded-full object-cover ring-2 ring-terra/30"
             />
             <div className="flex flex-col items-start">
-              <span className="font-display text-lg md:text-xl italic text-umber leading-none">
+              <span className="font-script text-2xl md:text-3xl text-umber leading-none">
                 Wildflower Hair Co.
               </span>
               <span className="font-label text-[8px] md:text-[9px] tracking-[0.2em] uppercase text-terra mt-0.5">

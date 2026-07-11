@@ -27,7 +27,7 @@ export default function Footer() {
                 className="w-14 h-14 rounded-full object-cover ring-2 ring-terra/40"
               />
               <div className="flex flex-col">
-                <span className="font-display text-xl italic text-silk leading-none">
+                <span className="font-script text-2xl text-silk leading-none">
                   Wildflower Hair Co.
                 </span>
                 <span className="font-label text-[9px] tracking-[0.2em] uppercase text-terra mt-1">
