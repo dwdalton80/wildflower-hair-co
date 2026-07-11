@@ -47,7 +47,7 @@ export default function Navbar() {
             <img
               src={siteConfig.logoUrl}
               alt="Wildflower Hair Co. By Kyia"
-              className="w-10 h-10 md:w-11 md:h-11 rounded-full object-cover ring-2 ring-terra/30"
+              className="w-14 h-14 md:w-16 md:h-16 rounded-full object-cover ring-2 ring-terra/30"
             />
             <div className="flex flex-col items-start">
               <span className="font-display text-lg md:text-xl italic text-umber leading-none">

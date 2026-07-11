@@ -24,7 +24,7 @@ export default function Footer() {
               <img
                 src={siteConfig.logoUrl}
                 alt="Wildflower Hair Co. By Kyia"
-                className="w-10 h-10 rounded-full object-cover ring-2 ring-terra/40"
+                className="w-14 h-14 rounded-full object-cover ring-2 ring-terra/40"
               />
               <div className="flex flex-col">
                 <span className="font-display text-xl italic text-silk leading-none">
