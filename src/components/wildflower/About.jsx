@@ -5,7 +5,7 @@ export default function About({ aboutImage }) {
   return (
     <section
       id="about"
-      className="py-24 md:py-32 bg-gradient-to-b from-silk to-[#f0f7f9] scroll-mt-20 overflow-hidden"
+      className="py-24 md:py-32 bg-gradient-to-b from-silk to-[#F0EBE3] scroll-mt-20 overflow-hidden"
     >
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-20 items-center">
         {/* Image */}

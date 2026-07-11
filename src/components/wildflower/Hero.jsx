@@ -6,7 +6,7 @@ export default function Hero({ heroImage }) {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden bg-silk"
+      className="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden bg-gradient-to-br from-silk via-[#F5F1EB] to-[#EFE9E1]"
     >
       <ShadowLeaf
         className="w-[500px] h-[700px] -top-32 -left-40"

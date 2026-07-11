@@ -6,7 +6,7 @@ export const siteConfig = {
   subTagline:
     "Where botanical grace meets professional artistry. Every transformation begins with a single seed of intention.",
   bookingUrl: "https://squareup.com/appointments/book/wildflower-hair-co",
-  facebookUrl: "https://www.facebook.com/share/1CLhDeXCcW/?mibextid=wwXIfr",
+  facebookUrl: "https://www.facebook.com/profile.php?id=61588159589693",
   salonName: "[Salon Name]",
   salonAddress: "[Address — to be updated]",
   salonCity: "[City, State]",

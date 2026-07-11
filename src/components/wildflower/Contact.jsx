@@ -6,16 +6,16 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-24 md:py-32 bg-terra scroll-mt-20 overflow-hidden relative"
+      className="py-24 md:py-32 bg-umber scroll-mt-20 overflow-hidden relative"
     >
       <div className="max-w-5xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 mb-4 justify-center">
-            <span className="w-10 h-px bg-silk/60" />
-            <span className="font-label text-[11px] tracking-[0.25em] uppercase text-silk font-semibold">
+            <span className="w-10 h-px bg-terra/60" />
+            <span className="font-label text-[11px] tracking-[0.25em] uppercase text-terra font-semibold">
               Book Now
             </span>
-            <span className="w-10 h-px bg-silk/60" />
+            <span className="w-10 h-px bg-terra/60" />
           </div>
           <h2 className="font-display text-4xl md:text-6xl text-silk leading-tight">
             Let's create
@@ -31,8 +31,8 @@ export default function Contact() {
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {/* Location */}
           <div className="text-center">
-            <div className="w-14 h-14 rounded-2xl bg-silk/15 flex items-center justify-center mx-auto mb-4">
-              <MapPin className="text-silk" size={22} strokeWidth={1.5} />
+            <div className="w-14 h-14 rounded-2xl bg-terra/15 flex items-center justify-center mx-auto mb-4">
+              <MapPin className="text-terra" size={22} strokeWidth={1.5} />
             </div>
             <p className="font-display text-xl italic text-silk mb-1">
               {siteConfig.salonName}
@@ -47,8 +47,8 @@ export default function Contact() {
 
           {/* Phone */}
           <div className="text-center">
-            <div className="w-14 h-14 rounded-2xl bg-silk/15 flex items-center justify-center mx-auto mb-4">
-              <Phone className="text-silk" size={22} strokeWidth={1.5} />
+            <div className="w-14 h-14 rounded-2xl bg-terra/15 flex items-center justify-center mx-auto mb-4">
+              <Phone className="text-terra" size={22} strokeWidth={1.5} />
             </div>
             <p className="font-body text-sm text-silk/70 mb-1">Call or text</p>
             <a
@@ -61,8 +61,8 @@ export default function Contact() {
 
           {/* Facebook */}
           <div className="text-center">
-            <div className="w-14 h-14 rounded-2xl bg-silk/15 flex items-center justify-center mx-auto mb-4">
-              <Facebook className="text-silk" size={22} strokeWidth={1.5} />
+            <div className="w-14 h-14 rounded-2xl bg-terra/15 flex items-center justify-center mx-auto mb-4">
+              <Facebook className="text-terra" size={22} strokeWidth={1.5} />
             </div>
             <p className="font-body text-sm text-silk/70 mb-1">Follow along</p>
             <a
