@@ -32,12 +32,16 @@ export default function Portfolio() {
       className="py-24 md:py-40 bg-silk scroll-mt-20 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16 md:mb-24">
-          <span className="font-label text-[11px] tracking-[0.3em] uppercase text-terra">
-            The Gallery
-          </span>
-          <h2 className="font-display text-4xl md:text-6xl italic text-umber mt-4">
-            Living Portfolio
+        <div className="text-center mb-16 md:mb-20">
+          <div className="inline-flex items-center gap-3 mb-4 justify-center">
+            <span className="w-10 h-px bg-terra" />
+            <span className="font-label text-[11px] tracking-[0.25em] uppercase text-terra font-semibold">
+              The Gallery
+            </span>
+            <span className="w-10 h-px bg-terra" />
+          </div>
+          <h2 className="font-display text-4xl md:text-6xl text-umber leading-tight">
+            Living <span className="italic text-terra">portfolio.</span>
           </h2>
         </div>
 

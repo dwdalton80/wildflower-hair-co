@@ -10,7 +10,7 @@ const prefersReducedMotion =
  */
 export default function ShadowLeaf({
   className = "",
-  color = "#D8B4A0",
+  color = "#D0E8EF",
   opacity = 0.05,
   duration = 180,
   style = {},

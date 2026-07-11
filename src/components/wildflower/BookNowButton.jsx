@@ -2,15 +2,15 @@ import { motion, useMotionValue } from "framer-motion";
 import { siteConfig } from "@/lib/siteConfig";
 
 const variants = {
-  solid: "bg-terra text-silk hover:bg-terra/90 shadow-lg shadow-terra/20",
-  light: "bg-silk text-terra hover:bg-silk/90 shadow-lg shadow-black/20",
-  outline: "border border-terra/40 text-terra hover:bg-terra/5",
-  ghost: "text-terra hover:bg-terra/5",
+  solid: "bg-terra text-silk hover:bg-terra/90 shadow-lg shadow-terra/30",
+  light: "bg-silk text-terra hover:bg-silk/90 shadow-lg shadow-black/10",
+  dark: "bg-umber text-silk hover:bg-umber/90",
+  outline: "border-2 border-terra text-terra hover:bg-terra hover:text-silk",
+  ghost: "text-terra hover:bg-terra/10",
 };
 
 /**
- * "Floating Petal" CTA — organic-shaped booking button.
- * Supports an optional magnetic cursor-follow effect for the hero.
+ * Modern pill CTA — clean, bold, with optional magnetic cursor-follow.
  */
 export default function BookNowButton({
   children = "Book Now",
@@ -25,8 +25,8 @@ export default function BookNowButton({
   const handleMouseMove = (e) => {
     if (!magnetic) return;
     const rect = e.currentTarget.getBoundingClientRect();
-    x.set((e.clientX - rect.left - rect.width / 2) * 0.15);
-    y.set((e.clientY - rect.top - rect.height / 2) * 0.15);
+    x.set((e.clientX - rect.left - rect.width / 2) * 0.2);
+    y.set((e.clientY - rect.top - rect.height / 2) * 0.2);
   };
 
   const handleMouseLeave = () => {
@@ -44,9 +44,9 @@ export default function BookNowButton({
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}
       style={magnetic ? { x, y } : {}}
-      whileHover={{ scale: magnetic ? 1.05 : 1.02 }}
-      whileTap={{ scale: 0.97 }}
-      className={`inline-flex items-center justify-center gap-2 px-7 py-3.5 text-xs font-label font-medium tracking-[0.2em] uppercase rounded-[100px_4px_100px_4px] transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terra/40 focus-visible:ring-offset-2 focus-visible:ring-offset-silk min-h-[48px] min-w-[48px] cursor-pointer ${variants[variant]} ${className}`}
+      whileHover={{ scale: magnetic ? 1.05 : 1.03 }}
+      whileTap={{ scale: 0.96 }}
+      className={`inline-flex items-center justify-center gap-2 px-8 py-4 text-xs font-label font-semibold tracking-[0.15em] uppercase rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terra/40 focus-visible:ring-offset-2 focus-visible:ring-offset-silk min-h-[48px] min-w-[48px] cursor-pointer ${variants[variant]} ${className}`}
       {...props}
     >
       {children}
