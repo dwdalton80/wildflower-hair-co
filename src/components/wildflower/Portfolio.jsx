@@ -86,6 +86,7 @@ export default function Portfolio() {
                     <img
                       src={img.image_url}
                       alt={img.caption || "Portfolio image"}
+                      style={{ objectPosition: img.object_position || "center" }}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     {img.caption && (
