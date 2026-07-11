@@ -36,6 +36,15 @@
       "type": "string",
       "default": "center",
       "title": "Object Position"
+    },
+    "object_fit": {
+      "type": "string",
+      "enum": [
+        "cover",
+        "contain"
+      ],
+      "default": "cover",
+      "title": "Object Fit"
     }
   },
   "required": [

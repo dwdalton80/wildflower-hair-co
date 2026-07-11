@@ -82,12 +82,12 @@ export default function Portfolio() {
                   className={`cursor-pointer group ${spanClass}`}
                   onClick={() => setSelected(img)}
                 >
-                  <div className="relative overflow-hidden rounded-[80px_4px_80px_4px] w-full h-full">
+                  <div className="relative overflow-hidden rounded-[80px_4px_80px_4px] w-full h-full bg-peony/20">
                     <img
                       src={img.image_url}
                       alt={img.caption || "Portfolio image"}
                       style={{ objectPosition: img.object_position || "center" }}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className={`w-full h-full transition-transform duration-700 group-hover:scale-105 ${img.object_fit === "contain" ? "object-contain" : "object-cover"}`}
                     />
                     {img.caption && (
                       <div className="absolute inset-0 bg-gradient-to-t from-umber/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-5">
