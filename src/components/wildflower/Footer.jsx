@@ -1,4 +1,4 @@
-import { Facebook } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 import { siteConfig } from "@/lib/siteConfig";
 import { smoothScrollTo } from "@/lib/smoothScroll";
 
@@ -52,14 +52,24 @@ export default function Footer() {
             ))}
           </nav>
 
-          <a
-            href={siteConfig.facebookUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-12 h-12 rounded-full border border-silk/20 flex items-center justify-center text-silk/60 hover:text-silk hover:bg-terra hover:border-terra transition-all"
-          >
-            <Facebook size={18} />
-          </a>
+          <div className="flex items-center gap-3">
+            <a
+              href={siteConfig.facebookUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full border border-silk/20 flex items-center justify-center text-silk/60 hover:text-silk hover:bg-terra hover:border-terra transition-all"
+            >
+              <Facebook size={18} />
+            </a>
+            <a
+              href={siteConfig.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full border border-silk/20 flex items-center justify-center text-silk/60 hover:text-silk hover:bg-terra hover:border-terra transition-all"
+            >
+              <Instagram size={18} />
+            </a>
+          </div>
         </div>
 
         <div className="mt-10 pt-8 border-t border-silk/10 text-center">

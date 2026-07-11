@@ -1,4 +1,4 @@
-import { MapPin, Phone, Facebook } from "lucide-react";
+import { MapPin, Phone, Facebook, Instagram } from "lucide-react";
 import { siteConfig } from "@/lib/siteConfig";
 import BookNowButton from "./BookNowButton";
 
@@ -58,19 +58,34 @@ export default function Contact() {
             </a>
           </div>
 
-          {/* Facebook */}
+          {/* Social */}
           <div className="text-center">
-            <div className="w-14 h-14 rounded-2xl bg-terra/15 flex items-center justify-center mx-auto mb-4">
-              <Facebook className="text-terra" size={22} strokeWidth={1.5} />
+            <div className="flex items-center justify-center gap-3 mx-auto mb-4">
+              <a
+                href={siteConfig.facebookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-14 h-14 rounded-2xl bg-terra/15 flex items-center justify-center hover:bg-terra transition-all"
+              >
+                <Facebook className="text-terra" size={22} strokeWidth={1.5} />
+              </a>
+              <a
+                href={siteConfig.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-14 h-14 rounded-2xl bg-terra/15 flex items-center justify-center hover:bg-terra transition-all"
+              >
+                <Instagram className="text-terra" size={22} strokeWidth={1.5} />
+              </a>
             </div>
             <p className="font-body text-sm text-silk/70 mb-1">Follow along</p>
             <a
-              href={siteConfig.facebookUrl}
+              href={siteConfig.instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="font-display text-xl italic text-silk hover:text-silk/80 transition-colors cursor-pointer"
             >
-              Wildflower on Facebook
+              @wildflower.hair.co
             </a>
           </div>
         </div>

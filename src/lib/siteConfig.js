@@ -6,6 +6,7 @@ export const siteConfig = {
   subTagline: "Your hair, but wilder.",
   bookingUrl: "https://squareup.com/appointments/book/wildflower-hair-co",
   facebookUrl: "https://www.facebook.com/profile.php?id=61588159589693",
+  instagramUrl: "https://www.instagram.com/_wildflower.hair.co_",
   salonName: "[Salon Name]",
   salonAddress: "[Address — to be updated]",
   salonCity: "[City, State]",
