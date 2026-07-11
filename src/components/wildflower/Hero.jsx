@@ -64,15 +64,15 @@ export default function Hero({ heroImage }) {
             className="flex items-center gap-3 mb-10 justify-center md:justify-start"
           >
             <span className="font-label text-[11px] tracking-[0.2em] uppercase text-umber/60 font-semibold">
-              Blondes
+              Beauty
             </span>
             <span className="text-terra text-xs">•</span>
             <span className="font-label text-[11px] tracking-[0.2em] uppercase text-umber/60 font-semibold">
-              Brunettes
+              Cosmetic
             </span>
             <span className="text-terra text-xs">•</span>
             <span className="font-label text-[11px] tracking-[0.2em] uppercase text-umber/60 font-semibold">
-              Dimension
+              Personal Care
             </span>
           </motion.div>
 
