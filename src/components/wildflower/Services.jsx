@@ -60,6 +60,8 @@ const services = [
     price: "$45",
     duration: "90 min",
     icon: `${ICON_BASE}/55d279d0e_generated_image.png`,
+    bookingUrl:
+      "https://kyiadalton.glossgenius.com/book?service_token=1000f-51772c03-38fd-450f-bb0b-4fd82b9c421c",
     description:
       "A custom cut sculpted to your face shape and texture, finished with a full wash and style.",
   },
