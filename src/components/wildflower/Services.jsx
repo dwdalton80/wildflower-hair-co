@@ -9,7 +9,7 @@ const services = [
     name: "Root Touch Up",
     price: "$65",
     duration: "135 min",
-    icon: `${ICON_BASE}/d1ba30bb8_generated_image.png`,
+    banner: `${ICON_BASE}/607df0ca5_generated_image.png`,
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-58e3acc1-3272-43f3-ad27-338f71f28669",
     description:
@@ -19,7 +19,7 @@ const services = [
     name: "Highlight",
     price: "$130",
     duration: "300 min",
-    icon: `${ICON_BASE}/8707623a3_generated_image.png`,
+    banner: `${ICON_BASE}/02599e32a_generated_image.png`,
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-f1262cf2-c140-49a6-adaa-1bb76e4a8a2c",
     description:
@@ -29,7 +29,7 @@ const services = [
     name: "Men's Haircut",
     price: "$35",
     duration: "45 min",
-    icon: `${ICON_BASE}/eedab26b3_generated_image.png`,
+    banner: `${ICON_BASE}/bd736d70c_generated_image.png`,
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-58632fad-6886-4088-b558-7ca47728e8cd",
     description:
@@ -39,7 +39,7 @@ const services = [
     name: "Children's Haircut",
     price: "$25",
     duration: "30 min",
-    icon: `${ICON_BASE}/f7001efcd_generated_image.png`,
+    banner: `${ICON_BASE}/1bc5f4e93_generated_image.png`,
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-a1dae390-afb6-4593-9ef6-61807aae0fde",
     description:
@@ -49,7 +49,7 @@ const services = [
     name: "Color Correction Service",
     price: "$150",
     duration: "120 min",
-    icon: `${ICON_BASE}/580aca479_generated_image.png`,
+    banner: `${ICON_BASE}/22da58d85_generated_image.png`,
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-c821e272-1abc-4706-9e52-c63fe0e3024e",
     description:
@@ -59,7 +59,7 @@ const services = [
     name: "Women's Haircut",
     price: "$45",
     duration: "90 min",
-    icon: `${ICON_BASE}/55d279d0e_generated_image.png`,
+    banner: `${ICON_BASE}/9ae3030cf_generated_image.png`,
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-51772c03-38fd-450f-bb0b-4fd82b9c421c",
     description:
@@ -69,7 +69,7 @@ const services = [
     name: "Lowlight",
     price: "$120",
     duration: "240 min",
-    icon: `${ICON_BASE}/59a3307c6_generated_image.png`,
+    banner: `${ICON_BASE}/1b50f1beb_generated_image.png`,
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-2e60269c-8c07-43c8-a36b-f3e9b3d68e36",
     description:
@@ -79,7 +79,7 @@ const services = [
     name: "Wash & Style",
     price: "$30",
     duration: "60 min",
-    icon: `${ICON_BASE}/287ddf30a_generated_image.png`,
+    banner: `${ICON_BASE}/23ad0b8c8_generated_image.png`,
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-55ac9a76-6fe9-4b53-acd6-277867712efb",
     description:
@@ -89,7 +89,7 @@ const services = [
     name: "Condition Treatment",
     price: "$40",
     duration: "90 min",
-    icon: `${ICON_BASE}/da02c3d12_generated_image.png`,
+    banner: `${ICON_BASE}/655adf34b_generated_image.png`,
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-9bb5698a-4715-4461-b068-c181c254495f",
     description:
@@ -99,7 +99,7 @@ const services = [
     name: "All Over Color",
     price: "$90",
     duration: "120 min",
-    icon: `${ICON_BASE}/90beaf566_generated_image.png`,
+    banner: `${ICON_BASE}/80f809602_generated_image.png`,
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-7c522a8f-05ce-4f5f-b241-d820bdd7abcf",
     description:
@@ -109,7 +109,7 @@ const services = [
     name: "Highlight & Lowlight",
     price: "$150",
     duration: "300 min",
-    icon: `${ICON_BASE}/fb4359aa7_generated_image.png`,
+    banner: `${ICON_BASE}/282dd4e20_generated_image.png`,
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-8d899f2f-60f8-4689-80a8-686e15cf4016",
     description:
@@ -119,7 +119,7 @@ const services = [
     name: "Face Framing Blonding",
     price: "$75",
     duration: "210 min",
-    icon: `${ICON_BASE}/d7b87a790_generated_image.png`,
+    banner: `${ICON_BASE}/4849c6460_generated_image.png`,
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-2a700c60-66a6-493e-a2bd-94bd747eb8b5",
     description:
@@ -159,49 +159,53 @@ export default function Services() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, idx) => (
             <div key={idx} className="group flex-shrink-0">
-              <div className="relative h-full bg-white rounded-3xl p-8 border border-peony/30 transition-all duration-500 hover:border-terra hover:shadow-2xl hover:shadow-terra/10 hover:-translate-y-1.5 overflow-hidden flex flex-col">
+              <div className="relative h-full bg-white rounded-3xl border border-peony/30 transition-all duration-500 hover:border-terra hover:shadow-2xl hover:shadow-terra/10 hover:-translate-y-1.5 overflow-hidden flex flex-col">
                 {/* Teal accent bar */}
-                <div className="absolute top-0 left-0 w-full h-1 bg-terra scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                <div className="absolute top-0 left-0 w-full h-1 z-10 bg-terra scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
 
-                {/* Icon */}
-                <div className="w-14 h-14 rounded-2xl bg-terra/10 flex items-center justify-center mb-5 group-hover:bg-terra transition-all duration-500 overflow-hidden">
+                {/* Banner image */}
+                <div className="relative w-full aspect-[4/3] overflow-hidden">
                   <img
-                    src={service.icon}
+                    src={service.banner}
                     alt={service.name}
-                    className="w-9 h-9 object-contain group-hover:invert group-hover:brightness-200 transition-all duration-500"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
                 </div>
 
-                <div className="flex items-start justify-between gap-3 mb-3">
-                  <h3 className="font-display text-2xl md:text-3xl text-umber leading-tight">
-                    {service.name}
-                  </h3>
-                  <span className="font-label text-lg tracking-[0.05em] text-terra font-semibold whitespace-nowrap mt-1">
-                    {service.price}
-                  </span>
+                {/* Content */}
+                <div className="p-8 flex flex-col flex-1">
+                  <div className="flex items-start justify-between gap-3 mb-3">
+                    <h3 className="font-display text-2xl md:text-3xl text-umber leading-tight">
+                      {service.name}
+                    </h3>
+                    <span className="font-label text-lg tracking-[0.05em] text-terra font-semibold whitespace-nowrap mt-1">
+                      {service.price}
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-1 mb-4">
+                    <Clock
+                      className="text-umber/40"
+                      size={12}
+                      strokeWidth={1.5}
+                    />
+                    <span className="font-body text-[11px] text-umber/50 tracking-wide">
+                      {service.duration}
+                    </span>
+                  </div>
+
+                  <p className="font-body text-umber/60 text-sm leading-relaxed mb-6">
+                    {service.description}
+                  </p>
+
+                  <button
+                    onClick={() => handleBook(service.bookingUrl)}
+                    className="font-label text-[10px] tracking-[0.2em] uppercase text-umber/50 group-hover:text-terra transition-colors duration-300 cursor-pointer font-semibold min-h-[48px] flex items-center w-full border-t border-peony/20 pt-4 mt-auto"
+                  >
+                    Book →
+                  </button>
                 </div>
-
-                <div className="flex items-center gap-1 mb-4">
-                  <Clock
-                    className="text-umber/40"
-                    size={12}
-                    strokeWidth={1.5}
-                  />
-                  <span className="font-body text-[11px] text-umber/50 tracking-wide">
-                    {service.duration}
-                  </span>
-                </div>
-
-                <p className="font-body text-umber/60 text-sm leading-relaxed mb-6">
-                  {service.description}
-                </p>
-
-                <button
-                  onClick={() => handleBook(service.bookingUrl)}
-                  className="font-label text-[10px] tracking-[0.2em] uppercase text-umber/50 group-hover:text-terra transition-colors duration-300 cursor-pointer font-semibold min-h-[48px] flex items-center w-full border-t border-peony/20 pt-4 mt-auto"
-                >
-                  Book →
-                </button>
               </div>
             </div>
           ))}
