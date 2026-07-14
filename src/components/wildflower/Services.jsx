@@ -10,6 +10,8 @@ const services = [
     price: "$65",
     duration: "135 min",
     icon: `${ICON_BASE}/d1ba30bb8_generated_image.png`,
+    bookingUrl:
+      "https://kyiadalton.glossgenius.com/book?service_token=1000f-58e3acc1-3272-43f3-ad27-338f71f28669",
     description:
       "Seamless root coverage that blends your new growth into your existing color for a fresh, polished look.",
   },
