@@ -74,6 +74,8 @@ const services = [
     price: "$40",
     duration: "90 min",
     icon: `${ICON_BASE}/da02c3d12_generated_image.png`,
+    bookingUrl:
+      "https://kyiadalton.glossgenius.com/book?service_token=1000f-9bb5698a-4715-4461-b068-c181c254495f",
     description:
       "A deep-conditioning treatment that restores moisture, softness, and shine to tired or stressed hair.",
   },
@@ -82,6 +84,8 @@ const services = [
     price: "$90",
     duration: "120 min",
     icon: `${ICON_BASE}/90beaf566_generated_image.png`,
+    bookingUrl:
+      "https://kyiadalton.glossgenius.com/book?service_token=1000f-7c522a8f-05ce-4f5f-b241-d820bdd7abcf",
     description:
       "A full single-process color application from root to tip for a rich, uniform, head-turning shade.",
   },
@@ -90,6 +94,8 @@ const services = [
     price: "$150",
     duration: "300 min",
     icon: `${ICON_BASE}/fb4359aa7_generated_image.png`,
+    bookingUrl:
+      "https://kyiadalton.glossgenius.com/book?service_token=1000f-8d899f2f-60f8-4689-80a8-686e15cf4016",
     description:
       "The best of both worlds — highlights and lowlights woven together for maximum depth, dimension, and movement.",
   },
@@ -98,14 +104,16 @@ const services = [
     price: "$75",
     duration: "210 min",
     icon: `${ICON_BASE}/d7b87a790_generated_image.png`,
+    bookingUrl:
+      "https://kyiadalton.glossgenius.com/book?service_token=1000f-2a700c60-66a6-493e-a2bd-94bd747eb8b5",
     description:
       "Bright, face-framing lightening around the hairline that illuminates your features and adds a sunlit glow.",
   },
 ];
 
 export default function Services() {
-  const handleBook = () => {
-    window.open(siteConfig.bookingUrl, "_blank", "noopener,noreferrer");
+  const handleBook = (url) => {
+    window.open(url || siteConfig.bookingUrl, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -173,7 +181,7 @@ export default function Services() {
                 </p>
 
                 <button
-                  onClick={handleBook}
+                  onClick={() => handleBook(service.bookingUrl)}
                   className="font-label text-[10px] tracking-[0.2em] uppercase text-umber/50 group-hover:text-terra transition-colors duration-300 cursor-pointer font-semibold min-h-[48px] flex items-center w-full border-t border-peony/20 pt-4 mt-auto"
                 >
                   Book →
