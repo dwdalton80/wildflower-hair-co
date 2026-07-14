@@ -3,7 +3,6 @@ import { Clock, Check } from "lucide-react";
 import { siteConfig } from "@/lib/siteConfig";
 import ServiceCart from "./ServiceCart";
 
-const BOOK_BASE = "https://kyiadalton.glossgenius.com/book";
 const ICON_BASE =
   "https://media.base44.com/images/public/6a5255ae151d27a36fddeb7b";
 
@@ -130,16 +129,6 @@ const services = [
   },
 ];
 
-function buildCombinedUrl(selected) {
-  const tokens = selected.map((s) => {
-    const params = new URL(s.bookingUrl).searchParams;
-    return params.get("service_token");
-  }).filter(Boolean);
-  if (tokens.length === 0) return siteConfig.bookingUrl;
-  const query = tokens.map((t) => `service_token=${t}`).join("&");
-  return `${BOOK_BASE}?${query}`;
-}
-
 export default function Services() {
   const [selected, setSelected] = useState([]);
 
@@ -154,7 +143,8 @@ export default function Services() {
   const isSelected = (service) => selected.some((s) => s.name === service.name);
 
   const handleBookSelected = () => {
-    window.open(buildCombinedUrl(selected), "_blank", "noopener,noreferrer");
+    const first = selected[0];
+    window.open(first?.bookingUrl || siteConfig.bookingUrl, "_blank", "noopener,noreferrer");
   };
 
   const handleBookSingle = (url) => {

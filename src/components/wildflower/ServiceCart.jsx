@@ -73,6 +73,9 @@ export default function ServiceCart({ selected, services, onRemove, onBook, onCl
                 </button>
               </div>
             </div>
+            <p className="px-5 pb-3 font-body text-[11px] text-silk/45 italic text-center">
+              Opens your first service in GlossGenius — add the rest once you're inside.
+            </p>
           </div>
         </motion.div>
       )}
