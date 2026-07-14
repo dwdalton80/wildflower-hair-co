@@ -20,6 +20,8 @@ const services = [
     price: "$130",
     duration: "300 min",
     icon: `${ICON_BASE}/8707623a3_generated_image.png`,
+    bookingUrl:
+      "https://kyiadalton.glossgenius.com/book?service_token=1000f-f1262cf2-c140-49a6-adaa-1bb76e4a8a2c",
     description:
       "Add dimension to your hair with expertly applied highlights and lowlights, enhancing your natural color and creating a sun-kissed effect.",
   },
