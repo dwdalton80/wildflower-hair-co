@@ -4,7 +4,7 @@ export const siteConfig = {
   logoUrl: "https://media.base44.com/images/public/6a5255ae151d27a36fddeb7b/ce3f36301_IMG_5258.jpg",
   tagline: "Rooted in grace. Blooming in beauty.",
   subTagline: "Your hair, but wilder.",
-  bookingUrl: "https://booking.glossgenius.com/wildflower-hair-co",
+  bookingUrl: "https://kyiadalton.glossgenius.com/services",
   facebookUrl: "https://www.facebook.com/profile.php?id=61588159589693",
   instagramUrl: "https://www.instagram.com/_wildflower.hair.co_",
   salonName: "[Salon Name]",

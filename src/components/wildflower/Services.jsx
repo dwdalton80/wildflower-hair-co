@@ -1,55 +1,41 @@
-import { Scissors, Palette, Sparkles, Leaf, Clock } from "lucide-react";
+import { Scissors, Palette, Leaf, Clock } from "lucide-react";
 import { siteConfig } from "@/lib/siteConfig";
 
 const services = [
   {
-    name: "Precision Cuts",
+    name: "Cuts",
     description:
       "Bespoke cuts sculpted to your face shape, texture, and vibe. Every snip is intentional.",
     Icon: Scissors,
     items: [
-      { label: "Women's Cut & Style", price: "$65+", duration: "60 min" },
-      { label: "Men's Cut", price: "$40+", duration: "45 min" },
-      { label: "Trim & Dust", price: "$35+", duration: "30 min" },
-      { label: "Kids Cut (under 12)", price: "$30+", duration: "30 min" },
+      { label: "Women's Haircut", price: "$45", duration: "90 min" },
+      { label: "Men's Haircut", price: "$35", duration: "45 min" },
+      { label: "Children's Haircut", price: "$25", duration: "30 min" },
     ],
   },
   {
-    name: "Living Color",
+    name: "Color",
     description:
-      "Balayage, dimensional highlights, and bold transformations that grow out beautifully.",
+      "Highlights, lowlights, root touch-ups, and bold transformations that grow out beautifully.",
     Icon: Palette,
     items: [
-      { label: "Full Balayage", price: "$200+", duration: "3 hrs" },
-      { label: "Partial Balayage", price: "$150+", duration: "2.5 hrs" },
-      { label: "Full Highlights", price: "$160+", duration: "2.5 hrs" },
-      { label: "Root Touch-Up", price: "$120+", duration: "2 hrs" },
-      { label: "All-Over Color", price: "$100+", duration: "2 hrs" },
-      { label: "Toner / Gloss", price: "$45+", duration: "30 min" },
+      { label: "Root Touch Up", price: "$65", duration: "135 min" },
+      { label: "Highlight", price: "$130", duration: "5 hrs" },
+      { label: "Lowlight", price: "$120", duration: "4 hrs" },
+      { label: "Highlight & Lowlight", price: "$150", duration: "5 hrs" },
+      { label: "All Over Color", price: "$90", duration: "2 hrs" },
+      { label: "Face Framing Blonding", price: "$75", duration: "3.5 hrs" },
+      { label: "Color Correction", price: "$150", duration: "2 hrs" },
     ],
   },
   {
-    name: "Editorial Styling",
+    name: "Style & Care",
     description:
-      "Blowouts, updos, and occasion styling that turn heads and hold all day.",
-    Icon: Sparkles,
-    items: [
-      { label: "Blowout", price: "$55+", duration: "45 min" },
-      { label: "Special Occasion Updo", price: "$85+", duration: "60 min" },
-      { label: "Bridal Styling", price: "$120+", duration: "90 min" },
-      { label: "Iron Curls / Waves", price: "$45+", duration: "30 min" },
-    ],
-  },
-  {
-    name: "Restorative Care",
-    description:
-      "Deep conditioning, bond-building, and gloss treatments for hair that glows with health.",
+      "Wash-and-style refreshes and conditioning treatments for hair that glows with health.",
     Icon: Leaf,
     items: [
-      { label: "Deep Conditioning Mask", price: "$45+", duration: "30 min" },
-      { label: "Olaplex Bond Building", price: "$50+", duration: "30 min" },
-      { label: "Clear Gloss Treatment", price: "$55+", duration: "45 min" },
-      { label: "K18 Repair Treatment", price: "$60+", duration: "30 min" },
+      { label: "Wash & Style", price: "$30", duration: "60 min" },
+      { label: "Condition Treatment", price: "$40", duration: "90 min" },
     ],
   },
 ];
@@ -83,7 +69,7 @@ export default function Services() {
         </div>
 
         {/* Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-3 gap-6">
           {services.map((service, idx) => (
             <div key={idx} className="group flex-shrink-0">
               <div className="relative h-full bg-white rounded-3xl p-8 border border-peony/30 transition-all duration-500 hover:border-terra hover:shadow-2xl hover:shadow-terra/10 hover:-translate-y-1.5 overflow-hidden flex flex-col">
