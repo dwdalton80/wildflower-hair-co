@@ -80,6 +80,8 @@ const services = [
     price: "$30",
     duration: "60 min",
     icon: `${ICON_BASE}/287ddf30a_generated_image.png`,
+    bookingUrl:
+      "https://kyiadalton.glossgenius.com/book?service_token=1000f-55ac9a76-6fe9-4b53-acd6-277867712efb",
     description:
       "A refreshing wash and blowout that leaves your hair clean, volumized, and camera-ready.",
   },
