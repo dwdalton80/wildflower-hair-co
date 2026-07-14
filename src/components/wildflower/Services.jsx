@@ -50,6 +50,8 @@ const services = [
     price: "$150",
     duration: "120 min",
     icon: `${ICON_BASE}/580aca479_generated_image.png`,
+    bookingUrl:
+      "https://kyiadalton.glossgenius.com/book?service_token=1000f-c821e272-1abc-4706-9e52-c63fe0e3024e",
     description:
       "Professional service to fix unwanted hair color results, restoring your hair to a vibrant and appealing shade.",
   },
