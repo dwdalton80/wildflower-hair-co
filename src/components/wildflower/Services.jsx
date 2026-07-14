@@ -30,6 +30,8 @@ const services = [
     price: "$35",
     duration: "45 min",
     icon: `${ICON_BASE}/eedab26b3_generated_image.png`,
+    bookingUrl:
+      "https://kyiadalton.glossgenius.com/book?service_token=1000f-58632fad-6886-4088-b558-7ca47728e8cd",
     description:
       "Precision haircut tailored for men, finished with styling to achieve your desired look, from classic to modern.",
   },
