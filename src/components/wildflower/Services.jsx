@@ -70,6 +70,8 @@ const services = [
     price: "$120",
     duration: "240 min",
     icon: `${ICON_BASE}/59a3307c6_generated_image.png`,
+    bookingUrl:
+      "https://kyiadalton.glossgenius.com/book?service_token=1000f-2e60269c-8c07-43c8-a36b-f3e9b3d68e36",
     description:
       "Depth-rich lowlights woven through your hair to add richness, contrast, and natural-looking dimension.",
   },
