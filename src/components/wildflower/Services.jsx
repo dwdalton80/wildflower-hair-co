@@ -40,6 +40,8 @@ const services = [
     price: "$25",
     duration: "30 min",
     icon: `${ICON_BASE}/f7001efcd_generated_image.png`,
+    bookingUrl:
+      "https://kyiadalton.glossgenius.com/book?service_token=1000f-a1dae390-afb6-4593-9ef6-61807aae0fde",
     description:
       "Fun and friendly haircut experience for children, ensuring comfort and a great style for your little ones.",
   },
