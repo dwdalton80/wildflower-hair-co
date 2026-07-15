@@ -130,6 +130,9 @@ export default function Contact() {
           <p className="font-body text-sm text-silk/60 mt-6 text-center italic">
             Thank you for respecting my time and supporting my small business. I appreciate your understanding and look forward to seeing you!
           </p>
+          <p className="font-body text-xs text-silk/50 mt-4 text-center italic">
+            By booking, you agree to these policies.
+          </p>
         </div>
       </div>
     </section>
