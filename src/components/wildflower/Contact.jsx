@@ -99,39 +99,36 @@ export default function Contact() {
           </p>
         </div>
 
-        {/* Cancellation Policy */}
+        {/* Booking Policy */}
         <div className="max-w-2xl mx-auto mt-14 bg-silk/5 border border-silk/10 rounded-2xl p-6 md:p-8 text-left">
           <h3 className="font-label text-[11px] tracking-[0.25em] uppercase text-terra font-semibold mb-4 text-center">
             Booking Policy
           </h3>
-          <ul className="space-y-3 font-body text-sm text-silk/70">
-            <li className="flex items-start gap-3">
-              <span className="text-terra mt-0.5">•</span>
-              <span>
-                A <span className="text-silk font-medium">24-hour notice</span> is required for all cancellations or reschedules.
-              </span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-terra mt-0.5">•</span>
-              <span>
-                Late cancellations (under 24 hours) may incur a <span className="text-silk font-medium">50% service fee</span> of the scheduled appointment.
-              </span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-terra mt-0.5">•</span>
-              <span>
-                <span className="text-silk font-medium">No-shows</span> will be charged the full service amount and may require a deposit for future bookings.
-              </span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-terra mt-0.5">•</span>
-              <span>
-                Running late? Please text or call — grace period is <span className="text-silk font-medium">15 minutes</span> before your appointment is forfeited.
-              </span>
-            </li>
-          </ul>
-          <p className="font-body text-xs text-silk/50 mt-5 text-center italic">
-            By booking, you agree to these policies. Kyia values your time and hers.
+          <p className="font-body text-sm text-silk/70 mb-6 text-center">
+            To ensure every client receives the time and attention they deserve, please review the following appointment policies:
+          </p>
+          <div className="space-y-6 font-body text-sm text-silk/70">
+            <div>
+              <p className="font-display text-lg italic text-silk mb-2">Running Late?</p>
+              <p>
+                Please text or call, the grace period is <span className="text-silk font-medium">15 minutes</span> before your appointment is forfeited.
+              </p>
+            </div>
+            <div>
+              <p className="font-display text-lg italic text-silk mb-2">New Client Booking Policy</p>
+              <p>
+                All new clients are required to have a <span className="text-silk font-medium">valid credit or debit card on file</span> when booking an appointment. Your appointment will not be confirmed until a card has been provided.
+              </p>
+            </div>
+            <div>
+              <p className="font-display text-lg italic text-silk mb-2">No-Shows &amp; Late Cancellations</p>
+              <p>
+                If you fail to show up for your appointment or cancel without providing the required notice, a <span className="text-silk font-medium">25% service fee</span> will be charged to the card on file. This fee helps cover the reserved appointment time that could have been made available to another client.
+              </p>
+            </div>
+          </div>
+          <p className="font-body text-sm text-silk/60 mt-6 text-center italic">
+            Thank you for respecting my time and supporting my small business. I appreciate your understanding and look forward to seeing you!
           </p>
         </div>
       </div>
