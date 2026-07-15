@@ -1,7 +1,5 @@
-import { useState } from "react";
-import { Clock, Check } from "lucide-react";
+import { Clock } from "lucide-react";
 import { siteConfig } from "@/lib/siteConfig";
-import ServiceCart from "./ServiceCart";
 
 const ICON_BASE =
   "https://media.base44.com/images/public/6a5255ae151d27a36fddeb7b";
@@ -130,24 +128,7 @@ const services = [
 ];
 
 export default function Services() {
-  const [selected, setSelected] = useState([]);
-
-  const toggleSelect = (service) => {
-    setSelected((prev) =>
-      prev.some((s) => s.name === service.name)
-        ? prev.filter((s) => s.name !== service.name)
-        : [...prev, service]
-    );
-  };
-
-  const isSelected = (service) => selected.some((s) => s.name === service.name);
-
-  const handleBookSelected = () => {
-    const first = selected[0];
-    window.open(first?.bookingUrl || siteConfig.bookingUrl, "_blank", "noopener,noreferrer");
-  };
-
-  const handleBookSingle = (url) => {
+  const handleBook = (url) => {
     window.open(url || siteConfig.bookingUrl, "_blank", "noopener,noreferrer");
   };
 
@@ -169,99 +150,67 @@ export default function Services() {
             What she does, <span className="italic text-terra">wildly well.</span>
           </h2>
           <p className="font-body text-umber/60 mt-4 max-w-xl text-base">
-            Select one service to book, or tap multiple to build a combo
-            appointment — Kyia will see them all together on GlossGenius.
+            Every service is tailored to your hair. Book directly through
+            GlossGenius — prices and times are listed exactly as offered.
           </p>
         </div>
 
         {/* Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, idx) => {
-            const selected = isSelected(service);
-            return (
-              <div key={idx} className="group flex-shrink-0">
-                <div
-                  className={
-                    "relative h-full bg-white rounded-3xl border transition-all duration-500 hover:shadow-2xl hover:shadow-terra/10 hover:-translate-y-1.5 overflow-hidden flex flex-col " +
-                    (selected
-                      ? "border-terra ring-2 ring-terra/30"
-                      : "border-peony/30 hover:border-terra")
-                  }
-                >
-                  {/* Teal accent bar */}
-                  <div className="absolute top-0 left-0 w-full h-1 z-20 bg-terra scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+          {services.map((service, idx) => (
+            <div key={idx} className="group flex-shrink-0">
+              <div className="relative h-full bg-white rounded-3xl border border-peony/30 transition-all duration-500 hover:border-terra hover:shadow-2xl hover:shadow-terra/10 hover:-translate-y-1.5 overflow-hidden flex flex-col">
+                {/* Teal accent bar */}
+                <div className="absolute top-0 left-0 w-full h-1 z-10 bg-terra scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
 
-                  {/* Banner image */}
-                  <div className="relative w-full aspect-[4/3] overflow-hidden">
-                    <img
-                      src={service.banner}
-                      alt={service.name}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                {/* Banner image */}
+                <div className="relative w-full aspect-[4/3] overflow-hidden">
+                  <img
+                    src={service.banner}
+                    alt={service.name}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
+                </div>
+
+                {/* Content */}
+                <div className="p-8 flex flex-col flex-1">
+                  <div className="flex items-start justify-between gap-3 mb-3">
+                    <h3 className="font-display text-2xl md:text-3xl text-umber leading-tight">
+                      {service.name}
+                    </h3>
+                    <span className="font-label text-lg tracking-[0.05em] text-terra font-semibold whitespace-nowrap mt-1">
+                      {service.price}
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-1 mb-4">
+                    <Clock
+                      className="text-umber/40"
+                      size={12}
+                      strokeWidth={1.5}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
-
-                    {/* Select toggle */}
-                    <button
-                      onClick={() => toggleSelect(service)}
-                      aria-label={selected ? `Remove ${service.name}` : `Select ${service.name}`}
-                      className={
-                        "absolute top-3 right-3 z-20 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer backdrop-blur-sm " +
-                        (selected
-                          ? "bg-terra text-silk"
-                          : "bg-white/70 text-umber/60 hover:bg-white hover:text-terra border border-white/60")
-                      }
-                    >
-                      <Check
-                        size={18}
-                        strokeWidth={2.5}
-                        className={selected ? "opacity-100" : "opacity-0 group-hover:opacity-60"}
-                      />
-                    </button>
+                    <span className="font-body text-[11px] text-umber/50 tracking-wide">
+                      {service.duration}
+                    </span>
                   </div>
 
-                  {/* Content */}
-                  <div className="p-8 flex flex-col flex-1">
-                    <div className="flex items-start justify-between gap-3 mb-3">
-                      <h3 className="font-display text-2xl md:text-3xl text-umber leading-tight">
-                        {service.name}
-                      </h3>
-                      <span className="font-label text-lg tracking-[0.05em] text-terra font-semibold whitespace-nowrap mt-1">
-                        {service.price}
-                      </span>
-                    </div>
+                  <p className="font-body text-umber/60 text-sm leading-relaxed mb-6">
+                    {service.description}
+                  </p>
 
-                    <div className="flex items-center gap-1 mb-4">
-                      <Clock className="text-umber/40" size={12} strokeWidth={1.5} />
-                      <span className="font-body text-[11px] text-umber/50 tracking-wide">
-                        {service.duration}
-                      </span>
-                    </div>
-
-                    <p className="font-body text-umber/60 text-sm leading-relaxed mb-6">
-                      {service.description}
-                    </p>
-
-                    <button
-                      onClick={() => handleBookSingle(service.bookingUrl)}
-                      className="font-label text-[10px] tracking-[0.2em] uppercase text-umber/50 group-hover:text-terra transition-colors duration-300 cursor-pointer font-semibold min-h-[48px] flex items-center w-full border-t border-peony/20 pt-4 mt-auto"
-                    >
-                      Book This Only →
-                    </button>
-                  </div>
+                  <button
+                    onClick={() => handleBook(service.bookingUrl)}
+                    className="font-label text-[10px] tracking-[0.2em] uppercase text-umber/50 group-hover:text-terra transition-colors duration-300 cursor-pointer font-semibold min-h-[48px] flex items-center w-full border-t border-peony/20 pt-4 mt-auto"
+                  >
+                    Book →
+                  </button>
                 </div>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
-
-      <ServiceCart
-        selected={selected}
-        services={services}
-        onRemove={(s) => toggleSelect(s)}
-        onBook={handleBookSelected}
-        onClear={() => setSelected([])}
-      />
     </section>
   );
 }
