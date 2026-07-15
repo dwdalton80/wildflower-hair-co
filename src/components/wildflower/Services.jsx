@@ -79,7 +79,7 @@ const services = [
     name: "Wash & Style",
     price: "$30",
     duration: "60 min",
-    banner: `${ICON_BASE}/23ad0b8c8_generated_image.png`,
+    banner: `${ICON_BASE}/05cdea146_8.png`,
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-55ac9a76-6fe9-4b53-acd6-277867712efb",
     description:
@@ -89,7 +89,7 @@ const services = [
     name: "Condition Treatment",
     price: "$40",
     duration: "90 min",
-    banner: `${ICON_BASE}/655adf34b_generated_image.png`,
+    banner: `${ICON_BASE}/adace3397_9.png`,
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-9bb5698a-4715-4461-b068-c181c254495f",
     description:
@@ -99,7 +99,7 @@ const services = [
     name: "All Over Color",
     price: "$90",
     duration: "120 min",
-    banner: `${ICON_BASE}/80f809602_generated_image.png`,
+    banner: `${ICON_BASE}/408e0c265_10.png`,
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-7c522a8f-05ce-4f5f-b241-d820bdd7abcf",
     description:
@@ -109,7 +109,7 @@ const services = [
     name: "Highlight & Lowlight",
     price: "$150",
     duration: "300 min",
-    banner: `${ICON_BASE}/282dd4e20_generated_image.png`,
+    banner: `${ICON_BASE}/85e3337f6_11.png`,
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-8d899f2f-60f8-4689-80a8-686e15cf4016",
     description:
@@ -119,7 +119,7 @@ const services = [
     name: "Face Framing Blonding",
     price: "$75",
     duration: "210 min",
-    banner: `${ICON_BASE}/4849c6460_generated_image.png`,
+    banner: `${ICON_BASE}/3c1f004aa_12.png`,
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-2a700c60-66a6-493e-a2bd-94bd747eb8b5",
     description:
