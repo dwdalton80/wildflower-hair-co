@@ -9,7 +9,7 @@ const services = [
     name: "Root Touch Up",
     price: "$65",
     duration: "135 min",
-    banner: `${ICON_BASE}/607df0ca5_generated_image.png`,
+    banner: `${ICON_BASE}/407f946fa_1.png`,
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-58e3acc1-3272-43f3-ad27-338f71f28669",
     description:
@@ -19,7 +19,7 @@ const services = [
     name: "Highlight",
     price: "$130",
     duration: "300 min",
-    banner: `${ICON_BASE}/02599e32a_generated_image.png`,
+    banner: `${ICON_BASE}/a1aa2ebee_2.png`,
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-f1262cf2-c140-49a6-adaa-1bb76e4a8a2c",
     description:
@@ -29,7 +29,7 @@ const services = [
     name: "Men's Haircut",
     price: "$35",
     duration: "45 min",
-    banner: `${ICON_BASE}/bd736d70c_generated_image.png`,
+    banner: `${ICON_BASE}/6b5f74653_3.png`,
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-58632fad-6886-4088-b558-7ca47728e8cd",
     description:
@@ -39,7 +39,7 @@ const services = [
     name: "Children's Haircut",
     price: "$25",
     duration: "30 min",
-    banner: `${ICON_BASE}/1bc5f4e93_generated_image.png`,
+    banner: `${ICON_BASE}/8f4a297bb_4.png`,
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-a1dae390-afb6-4593-9ef6-61807aae0fde",
     description:
@@ -49,7 +49,7 @@ const services = [
     name: "Color Correction Service",
     price: "$150",
     duration: "120 min",
-    banner: `${ICON_BASE}/22da58d85_generated_image.png`,
+    banner: `${ICON_BASE}/9af783d2b_5.png`,
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-c821e272-1abc-4706-9e52-c63fe0e3024e",
     description:
@@ -59,7 +59,7 @@ const services = [
     name: "Women's Haircut",
     price: "$45",
     duration: "90 min",
-    banner: `${ICON_BASE}/9ae3030cf_generated_image.png`,
+    banner: `${ICON_BASE}/c4f55c91a_6.png`,
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-51772c03-38fd-450f-bb0b-4fd82b9c421c",
     description:
@@ -69,7 +69,7 @@ const services = [
     name: "Lowlight",
     price: "$120",
     duration: "240 min",
-    banner: `${ICON_BASE}/1b50f1beb_generated_image.png`,
+    banner: `${ICON_BASE}/5f58480aa_7.png`,
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-2e60269c-8c07-43c8-a36b-f3e9b3d68e36",
     description:
