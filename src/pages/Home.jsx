@@ -3,7 +3,7 @@ import Hero from "@/components/wildflower/Hero";
 import Services from "@/components/wildflower/Services";
 import Portfolio from "@/components/wildflower/Portfolio";
 import About from "@/components/wildflower/About";
-import Testimonials from "@/components/wildflower/Testimonials";
+// import Testimonials from "@/components/wildflower/Testimonials";
 import Contact from "@/components/wildflower/Contact";
 import Footer from "@/components/wildflower/Footer";
 import StickyBookBar from "@/components/wildflower/StickyBookBar";
@@ -21,7 +21,7 @@ export default function Home() {
       <Services />
       <Portfolio />
       <About aboutImage={ABOUT_IMAGE} />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Contact />
       <Footer />
       <StickyBookBar />
