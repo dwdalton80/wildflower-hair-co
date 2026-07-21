@@ -9,7 +9,7 @@ export const siteConfig = {
   instagramUrl: "https://www.instagram.com/_wildflower.hair.co_",
   salonName: "Hair Designs by Charlotte",
   salonAddress: "203 N 7th Ave",
-  salonCity: "[City, State]",
+  salonCity: "Durant, OK 74701",
   phone: "580-980-0808",
   email: "hello@wildflowerhairco.com",
 };
