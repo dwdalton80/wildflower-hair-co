@@ -49,7 +49,7 @@ export default function Contact() {
             <div className="w-14 h-14 rounded-2xl bg-terra/15 flex items-center justify-center mx-auto mb-4">
               <Phone className="text-terra" size={22} strokeWidth={1.5} />
             </div>
-            <p className="font-body text-sm text-silk/70 mb-1">Call or text</p>
+            <p className="font-body text-sm text-silk/70 mb-1">Mobile</p>
             <a
               href={`tel:${siteConfig.phone.replace(/[^0-9]/g, "")}`}
               className="font-display text-xl italic text-silk hover:text-silk/80 transition-colors cursor-pointer"
