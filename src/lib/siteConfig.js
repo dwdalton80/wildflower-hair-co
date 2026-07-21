@@ -8,7 +8,7 @@ export const siteConfig = {
   facebookUrl: "https://www.facebook.com/profile.php?id=61588159589693",
   instagramUrl: "https://www.instagram.com/_wildflower.hair.co_",
   salonName: "Hair Designs by Charlotte",
-  salonAddress: "[Address — to be updated]",
+  salonAddress: "203 N 7th Ave",
   salonCity: "[City, State]",
   phone: "580-980-0808",
   email: "hello@wildflowerhairco.com",
