@@ -7,7 +7,7 @@ export const siteConfig = {
   bookingUrl: "https://kyiadalton.glossgenius.com/services",
   facebookUrl: "https://www.facebook.com/profile.php?id=61588159589693",
   instagramUrl: "https://www.instagram.com/_wildflower.hair.co_",
-  salonName: "[Salon Name]",
+  salonName: "Hair Designs by Charlotte",
   salonAddress: "[Address — to be updated]",
   salonCity: "[City, State]",
   phone: "580-980-0808",
