@@ -11,5 +11,6 @@ export const siteConfig = {
   salonAddress: "203 N 7th Ave",
   salonCity: "Durant, OK 74701",
   phone: "580-980-0808",
+  salonPhone: "580-924-4789",
   email: "hello@wildflowerhairco.com",
 };
