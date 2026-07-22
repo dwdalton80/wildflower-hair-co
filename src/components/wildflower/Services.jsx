@@ -1,35 +1,34 @@
 import { Clock } from "lucide-react";
 import { siteConfig } from "@/lib/siteConfig";
 
-const ICON_BASE =
-  "https://media.base44.com/images/public/6a5255ae151d27a36fddeb7b";
-
 const services = [
   {
-    name: "Root Touch Up",
-    price: "$65",
-    duration: "135 min",
-    banner: `${ICON_BASE}/407f946fa_1.png`,
+    name: "Womens Haircut, Wash, Style",
+    price: "$45+",
+    duration: "90 min",
+    banner:
+      "https://static.glossgenius.com/public/stockimage/7ea145647a71979c3cf2bcabfb84ca1c2ef7a488/image/dee04a502d2485cb0a00132fe7b78dc3.png",
     bookingUrl:
-      "https://kyiadalton.glossgenius.com/book?service_token=1000f-58e3acc1-3272-43f3-ad27-338f71f28669",
+      "https://kyiadalton.glossgenius.com/book?service_token=1000f-51772c03-38fd-450f-bb0b-4fd82b9c421c",
     description:
-      "Seamless root coverage that blends your new growth into your existing color for a fresh, polished look.",
+      "A custom cut sculpted to your face shape and texture, finished with a full wash and style.",
   },
   {
-    name: "Highlight",
-    price: "$130",
-    duration: "300 min",
-    banner: `${ICON_BASE}/a1aa2ebee_2.png`,
-    bookingUrl:
-      "https://kyiadalton.glossgenius.com/book?service_token=1000f-f1262cf2-c140-49a6-adaa-1bb76e4a8a2c",
-    description:
-      "Add dimension to your hair with expertly applied highlights and lowlights, enhancing your natural color and creating a sun-kissed effect.",
-  },
-  {
-    name: "Men's Haircut",
-    price: "$35",
+    name: "Womens Dry Haircut",
+    price: "$35+",
     duration: "45 min",
-    banner: `${ICON_BASE}/6b5f74653_3.png`,
+    banner:
+      "https://static.glossgenius.com/public/service/0403d9f6baf032cdea7f383d6b7a5646a067b137/image/0e0487d80ce0b75009127a73ff6467fe.png",
+    bookingUrl: "",
+    description:
+      "A precision dry haircut tailored to your style — quick, clean, and styled to finish.",
+  },
+  {
+    name: "Basic Men's Haircut",
+    price: "$25+",
+    duration: "45 min",
+    banner:
+      "https://static.glossgenius.com/public/service/c059305f10742376fa4c5c44bba61007ddc7d7d4/image/05ab4f99b4db8a1f2869f588a26fb904.png",
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-58632fad-6886-4088-b558-7ca47728e8cd",
     description:
@@ -37,49 +36,21 @@ const services = [
   },
   {
     name: "Children's Haircut",
-    price: "$25",
+    price: "$15",
     duration: "30 min",
-    banner: `${ICON_BASE}/8f4a297bb_4.png`,
+    banner:
+      "https://static.glossgenius.com/public/service/0edb56c7e398261c05cab7384c726a84afcb8869/image/d7171d1866454a5224e036b5b5777d47.png",
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-a1dae390-afb6-4593-9ef6-61807aae0fde",
     description:
       "Fun and friendly haircut experience for children, ensuring comfort and a great style for your little ones.",
   },
   {
-    name: "Color Correction Service",
-    price: "$150",
-    duration: "120 min",
-    banner: `${ICON_BASE}/9af783d2b_5.png`,
-    bookingUrl:
-      "https://kyiadalton.glossgenius.com/book?service_token=1000f-c821e272-1abc-4706-9e52-c63fe0e3024e",
-    description:
-      "Professional service to fix unwanted hair color results, restoring your hair to a vibrant and appealing shade.",
-  },
-  {
-    name: "Women's Haircut",
-    price: "$45",
-    duration: "90 min",
-    banner: `${ICON_BASE}/c4f55c91a_6.png`,
-    bookingUrl:
-      "https://kyiadalton.glossgenius.com/book?service_token=1000f-51772c03-38fd-450f-bb0b-4fd82b9c421c",
-    description:
-      "A custom cut sculpted to your face shape and texture, finished with a full wash and style.",
-  },
-  {
-    name: "Lowlight",
-    price: "$120",
-    duration: "240 min",
-    banner: `${ICON_BASE}/5f58480aa_7.png`,
-    bookingUrl:
-      "https://kyiadalton.glossgenius.com/book?service_token=1000f-2e60269c-8c07-43c8-a36b-f3e9b3d68e36",
-    description:
-      "Depth-rich lowlights woven through your hair to add richness, contrast, and natural-looking dimension.",
-  },
-  {
     name: "Wash & Style",
     price: "$30",
     duration: "60 min",
-    banner: `${ICON_BASE}/05cdea146_8.png`,
+    banner:
+      "https://static.glossgenius.com/public/service/3b85813701fc99a9c90ea1abb702329226f4c637/image/bab822bc824471f56584678fc109eea9.png",
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-55ac9a76-6fe9-4b53-acd6-277867712efb",
     description:
@@ -89,41 +60,109 @@ const services = [
     name: "Condition Treatment",
     price: "$40",
     duration: "90 min",
-    banner: `${ICON_BASE}/adace3397_9.png`,
+    banner:
+      "https://static.glossgenius.com/public/service/9af3110a5505d0a845829b8470ed5a695c6d4394/image/80a15db7d96a6eee086672769688f70e.png",
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-9bb5698a-4715-4461-b068-c181c254495f",
     description:
       "A deep-conditioning treatment that restores moisture, softness, and shine to tired or stressed hair.",
   },
   {
-    name: "All Over Color",
-    price: "$90",
+    name: "Root Touch Up, Style",
+    price: "$70+",
+    duration: "150 min",
+    banner:
+      "https://static.glossgenius.com/public/service/e7fbf05b626fdfeb69ca55121b44f6f252ecb765/image/990a545a55d2f2bfd3141764ae1010fc.png",
+    bookingUrl:
+      "https://kyiadalton.glossgenius.com/book?service_token=1000f-58e3acc1-3272-43f3-ad27-338f71f28669",
+    description:
+      "Seamless root coverage that blends your new growth into your existing color for a fresh, polished look.",
+  },
+  {
+    name: "Highlight, Tone, Style",
+    price: "$130+",
+    duration: "300 min",
+    banner:
+      "https://static.glossgenius.com/public/service/11366fa09e5d06ead02a66d2ab4e37b091d7ecc1/image/0ffbd0dc228c44b5e0f629ac016843f5.png",
+    bookingUrl:
+      "https://kyiadalton.glossgenius.com/book?service_token=1000f-f1262cf2-c140-49a6-adaa-1bb76e4a8a2c",
+    description:
+      "Add dimension to your hair with expertly applied highlights, enhancing your natural color and creating a sun-kissed effect. If extra product needs to be used there will be a 10 dollars added up charge.",
+  },
+  {
+    name: "Highlight Lowlight, Tone, Style",
+    price: "$150+",
+    duration: "300 min",
+    banner:
+      "https://static.glossgenius.com/public/service/38eb3c2ebd0b7206403a6087bbf78ce5008b8953/image/481061c71146a0b3fb2af4ff2b833c57.png",
+    bookingUrl:
+      "https://kyiadalton.glossgenius.com/book?service_token=1000f-8d899f2f-60f8-4689-80a8-686e15cf4016",
+    description:
+      "Elevate your hair with stunning dimension and contrast through our expert Highlight Lowlight service. Let your hair shine with a natural, sun-kissed look that enhances your beauty. If extra product is used there will be a 10 dollars added up charge for that product.",
+  },
+  {
+    name: "Lowlight, Style",
+    price: "$120+",
+    duration: "240 min",
+    banner:
+      "https://static.glossgenius.com/public/service/30bffd5af7c2f8058d4c1b38fedde5a8c61da285/image/2214f1c8b6fbf90ee6e0e72c932c8cde.png",
+    bookingUrl:
+      "https://kyiadalton.glossgenius.com/book?service_token=1000f-2e60269c-8c07-43c8-a36b-f3e9b3d68e36",
+    description:
+      "Discover the art of dimension with our lowlight service, adding depth and richness to your hair for a natural look. If extra product needs to be used there will be a 10 dollars added up charge.",
+  },
+  {
+    name: "All Over Color, Style",
+    price: "$90+",
     duration: "120 min",
-    banner: `${ICON_BASE}/408e0c265_10.png`,
+    banner:
+      "https://static.glossgenius.com/public/service/9143260bb2fd22121b14b881f3fa4a2dc30c49e7/image/57d867e95d2fe824240b5c57ce8b0e5a.png",
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-7c522a8f-05ce-4f5f-b241-d820bdd7abcf",
     description:
       "A full single-process color application from root to tip for a rich, uniform, head-turning shade.",
   },
   {
-    name: "Highlight & Lowlight",
-    price: "$150",
-    duration: "300 min",
-    banner: `${ICON_BASE}/85e3337f6_11.png`,
-    bookingUrl:
-      "https://kyiadalton.glossgenius.com/book?service_token=1000f-8d899f2f-60f8-4689-80a8-686e15cf4016",
-    description:
-      "The best of both worlds — highlights and lowlights woven together for maximum depth, dimension, and movement.",
-  },
-  {
-    name: "Face Framing Blonding",
-    price: "$75",
+    name: "Face Framing Blonding, Tone, Style",
+    price: "$75+",
     duration: "210 min",
-    banner: `${ICON_BASE}/3c1f004aa_12.png`,
+    banner:
+      "https://static.glossgenius.com/public/service/fb142dacf5200c3ecdc996c806e7c1c624c7dda5/image/6ff3793783244c1d1c3d8e10a74de3bf.png",
     bookingUrl:
       "https://kyiadalton.glossgenius.com/book?service_token=1000f-2a700c60-66a6-493e-a2bd-94bd747eb8b5",
     description:
       "Bright, face-framing lightening around the hairline that illuminates your features and adds a sunlit glow.",
+  },
+  {
+    name: "Color Correction Service",
+    price: "$200+",
+    duration: "360 min",
+    banner:
+      "https://static.glossgenius.com/public/service/fbd8a5fa8455d8f0cd71afe1f945641144ccfe58/image/61fced7aba8761cf74a996510a383ae5.png",
+    bookingUrl:
+      "https://kyiadalton.glossgenius.com/book?service_token=1000f-c821e272-1abc-4706-9e52-c63fe0e3024e",
+    description:
+      "Professional service to fix unwanted hair color results, restoring your hair to a vibrant and appealing shade.",
+  },
+  {
+    name: "Touch Up On Scalp Bleach, Style",
+    price: "$120+",
+    duration: "210 min",
+    banner:
+      "https://static.glossgenius.com/public/service/0cc0e8358940cf1007b70a569e31677dcd556af7/image/c685334e3034024df734309add3e55ca.jpg",
+    bookingUrl: "",
+    description:
+      "A root touch-up for scalp bleach maintenance, blending new growth into your existing lightened look.",
+  },
+  {
+    name: "On Scalp Bleach, Toner",
+    price: "$120",
+    duration: "210 min",
+    banner:
+      "https://static.glossgenius.com/public/service/7de38b57fed07f9c7fb1bc8558fba7375ff91f0e/image/907b3c198adcd4db2260474ddf9c1b21.jpg",
+    bookingUrl: "",
+    description:
+      "Full on-scalp lightening with a custom toner for a bright, even, beautifully finished blonde.",
   },
 ];
 
