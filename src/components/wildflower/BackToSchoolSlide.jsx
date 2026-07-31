@@ -121,7 +121,7 @@ export default function BackToSchoolSlide() {
           <img
             src={FLYER_IMAGE}
             alt="Back to School Special at Wildflower Hair Co."
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain bg-silk"
           />
         </div>
         <motion.div
