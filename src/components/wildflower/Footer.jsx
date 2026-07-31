@@ -1,13 +1,14 @@
 import { Facebook, Instagram } from "lucide-react";
 import { siteConfig } from "@/lib/siteConfig";
+import { Link } from "react-router-dom";
 import { smoothScrollTo } from "@/lib/smoothScroll";
 
 const footerLinks = [
   { label: "Services", href: "#services" },
   { label: "Portfolio", href: "#portfolio" },
-  { label: "About", href: "#about" },
+  { label: "About", href: "/about" },
   // { label: "Reviews", href: "#reviews" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Footer() {
@@ -41,15 +42,25 @@ export default function Footer() {
           </div>
 
           <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
-            {footerLinks.map((link) => (
-              <button
-                key={link.href}
-                onClick={() => handleNavClick(link.href)}
-                className="font-label text-[11px] tracking-[0.15em] uppercase text-silk/60 hover:text-terra transition-colors cursor-pointer font-semibold"
-              >
-                {link.label}
-              </button>
-            ))}
+            {footerLinks.map((link) =>
+              link.href.startsWith("/") ? (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className="font-label text-[11px] tracking-[0.15em] uppercase text-silk/60 hover:text-terra transition-colors cursor-pointer font-semibold"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <button
+                  key={link.href}
+                  onClick={() => handleNavClick(link.href)}
+                  className="font-label text-[11px] tracking-[0.15em] uppercase text-silk/60 hover:text-terra transition-colors cursor-pointer font-semibold"
+                >
+                  {link.label}
+                </button>
+              )
+            )}
           </nav>
 
           <div className="flex items-center gap-3">
