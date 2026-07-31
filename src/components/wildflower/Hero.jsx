@@ -8,7 +8,7 @@ const SLIDE_COUNT = 2;
 const INTERVAL = 7000;
 
 export default function Hero({ heroImage }) {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(1);
 
   useEffect(() => {
     const timer = setInterval(
