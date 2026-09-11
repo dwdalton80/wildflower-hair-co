@@ -95,7 +95,7 @@ export default function FallSpecialSlide() {
           <img
             src={FALL_IMAGE}
             alt="Fall Special — 20% off any hair service at Wildflower Hair Co."
-            className="w-full h-full object-contain bg-silk"
+            className="w-full h-full object-cover"
           />
         </div>
         <motion.div
