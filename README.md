@@ -6,22 +6,22 @@ Charlotte.
 
 **Live site:** [wildflowerhairco.me](https://wildflowerhairco.me)
 
-This is a static React site (Vite + Tailwind CSS), intended for hosting on
-Cloudflare Pages. There is no backend server, no database, and no user
-authentication — booking happens off-site through
+This is a static React site (Vite + Tailwind CSS), hosted on Cloudflare
+(Workers, static assets). There is no backend server, no database, and no
+user authentication — booking happens off-site through
 [GlossGenius](https://kyiadalton.glossgenius.com/services).
 
 This repo was converted from a **Base44** app (Base44 SDK + hosted backend on
-Render) to a plain static site. See [`docs/HANDOFF.md`](./docs/HANDOFF.md) for
-the full record of what changed and why.
+Render) to a plain static site, and DNS was cut over from GoDaddy to
+Cloudflare on 2026-09-17. See [`docs/HANDOFF.md`](./docs/HANDOFF.md) for the
+full record of what changed and why.
 
 ## Documentation
 
 - **[docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md)** — what's built, tech
   stack, repository structure, routes, data flow.
 - **[docs/DEPLOYMENT.md](./docs/DEPLOYMENT.md)** — local dev, build,
-  Cloudflare Pages hosting, and the DNS cutover from the current GoDaddy/Base44
-  setup. **Start here to actually put the site live.**
+  Cloudflare hosting, and the record of the DNS cutover from GoDaddy/Base44.
 - **[docs/HANDOFF.md](./docs/HANDOFF.md)** — technical handoff: every external
   account this site depends on, what the Base44→static conversion changed,
   known limitations, and conventions for future development.

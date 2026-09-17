@@ -4,9 +4,10 @@ Read alongside [`ARCHITECTURE.md`](./ARCHITECTURE.md) (what's built) and
 [`DEPLOYMENT.md`](./DEPLOYMENT.md) (build/hosting/DNS runbook — **the actual
 steps to go live**).
 
-**Last verified:** 2026-09-17, against the live site at `wildflowerhairco.me`
-(then still on Base44/Render) and the `main` branch of
-`dwdalton80/wildflower-hair-co`.
+**Last verified:** 2026-09-17. The Base44→Cloudflare conversion, the
+Cloudflare Workers deployment, and the DNS cutover from GoDaddy to Cloudflare
+were all completed this same day — see `DEPLOYMENT.md` for the full record.
+Nameserver propagation may still be finishing at the moment this was written.
 
 ---
 
@@ -14,10 +15,11 @@ steps to go live**).
 
 This site was originally built and hosted on **Base44** (an AI app builder
 with a hosted backend). It has been converted to a **static React site with no
-backend, no database, and no user authentication**, ready to host on
-**Cloudflare Pages**. The two dynamic sections that used to read from a
+backend, no database, and no user authentication**, and is now live on
+**Cloudflare** (Workers, static assets — see `DEPLOYMENT.md` §2) at
+`wildflowerhairco.me`. The two dynamic sections that used to read from a
 Base44-hosted database (the portfolio gallery and a testimonials section) now
-read from plain local data files instead — see §3.
+read from plain local data files instead — see §2 below.
 
 This is good news for portability going forward: the entire "product" is now
 the Git repository plus Cloudflare hosting/DNS plus a couple of third-party
@@ -106,13 +108,13 @@ Base44 dev environment.
 
 | # | Service | What it's used for | Where referenced | Who needs access |
 |---|---|---|---|---|
-| 1 | **GoDaddy** | Domain registrar for `wildflowerhairco.me` (expires **2027-02-23**) | — (DNS config, not code) | Whoever manages the domain/renewal |
-| 2 | **Cloudflare** | Will be authoritative DNS **and** hosting (Cloudflare Pages) once `DEPLOYMENT.md` §3 is done | `wrangler.json` | New hosting owner |
-| 3 | **GitHub** | Source control; trigger for Cloudflare Pages auto-deploys once connected | Whole repo (`dwdalton80/wildflower-hair-co`) | Dev/owner |
+| 1 | **GoDaddy** | Domain registrar for `wildflowerhairco.me` (expires **2027-02-23**). No longer the DNS host — see #2. | — (registrar only, not code) | Whoever manages the domain/renewal |
+| 2 | **Cloudflare** | Authoritative DNS **and** hosting (Workers, static assets), account `dwdalton80@gmail.com` — same account as `ddinsgroup.com`/`dd-insurance-group` | `wrangler.json` | Hosting owner |
+| 3 | **GitHub** | Source control; the **Cloudflare Workers and Pages** GitHub App triggers auto-deploys on push to `main` | Whole repo (`dwdalton80/wildflower-hair-co`) | Dev/owner |
 | 4 | **GlossGenius** | All booking happens here — every "Book Now" CTA opens this in a new tab | `src/lib/siteConfig.js` → `bookingUrl` | Kyia (this is her actual booking/calendar/payments system) |
 | 5 | **Facebook / Instagram** | Social links in footer/contact | `src/lib/siteConfig.js` | Kyia |
 | 6 | **Google Fonts** | Cormorant Garamond, Instrument Sans, Montserrat, Allura | `index.html` | None — free, no account |
-| 7 | **Base44** | *(being retired)* Previously hosting + backend. Safe to cancel once the Cloudflare site is confirmed live — see `DEPLOYMENT.md` §3 Step 6. | — | Whoever holds the Base44 account, to cancel it |
+| 7 | **Base44** | *(retired)* Previously hosting + backend. Safe to cancel now that the Cloudflare site is live — see `DEPLOYMENT.md` §3. | — | Whoever holds the Base44 account, to cancel it |
 
 ## 4. Known issue found during this audit: `hello@wildflowerhairco.com` may not actually receive mail
 
@@ -132,19 +134,20 @@ during the DNS research for `DEPLOYMENT.md` and is easy to miss otherwise.
 
 ## 5. Migration/go-live checklist
 
-- [ ] Push this repo to `main` on `dwdalton80/wildflower-hair-co` (or confirm
-      it's already there).
-- [ ] Create the Cloudflare Pages project per `DEPLOYMENT.md` §2 and confirm
-      the `*.pages.dev` preview build looks correct.
-- [ ] Add `wildflowerhairco.me` to Cloudflare and switch nameservers at
-      GoDaddy per `DEPLOYMENT.md` §3 (Steps 1–2).
-- [ ] Bind the custom domain to the Pages project and set up the
-      `www`→apex redirect + Always Use HTTPS (`DEPLOYMENT.md` §3, Steps 3–4).
-- [ ] Verify live: both `/about` and `/contact` load correctly via a direct
-      URL (not just in-app navigation), images load, fonts load, no mixed
-      content or CSP console errors.
+- [x] Push this repo to `main` on `dwdalton80/wildflower-hair-co`.
+- [x] Create the Cloudflare Workers project per `DEPLOYMENT.md` §2 — confirmed
+      live at `wildflower-hair-co.dwdalton80.workers.dev`.
+- [x] Add `wildflowerhairco.me` to Cloudflare and switch nameservers at
+      GoDaddy per `DEPLOYMENT.md` §3.
+- [x] Bind the custom domain (apex + `www`) to the Worker and set up the
+      `www`→apex redirect + Always Use HTTPS (`DEPLOYMENT.md` §3).
+- [ ] **Verify live once nameservers finish propagating**: `dig +short NS
+      wildflowerhairco.me` shows Cloudflare's nameservers, both `/about` and
+      `/contact` load correctly via a direct URL (not just in-app
+      navigation), images load, fonts load, no CSP console errors. See
+      `DEPLOYMENT.md` §3's verify commands.
 - [ ] Once confirmed, cancel/downgrade the Base44 account (`DEPLOYMENT.md`
-      §3 Step 6).
+      §3).
 - [ ] Separately: look into the `hello@wildflowerhairco.com` mail question
       above (§4) — not blocking for the Cloudflare migration itself.
 
