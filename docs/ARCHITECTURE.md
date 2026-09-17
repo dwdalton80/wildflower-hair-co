@@ -84,10 +84,20 @@ changed in the conversion.
 
 ## 5. Third-party integrations
 
-- **GlossGenius** — all booking CTAs (`BookNowButton.jsx`) open
-  `siteConfig.bookingUrl` (`https://kyiadalton.glossgenius.com/services`) in a
-  new tab via `window.open`. Not embedded (no iframe), so there's nothing to
-  configure in code beyond that one URL.
+- **GlossGenius** — two separate integration points, both plain links/images
+  (no iframe, no SDK):
+  - Booking CTAs (`BookNowButton.jsx`) open `siteConfig.bookingUrl`
+    (`https://kyiadalton.glossgenius.com/services`) in a new tab via
+    `window.open`.
+  - `Services.jsx` hardcodes, per service, a photo hotlinked from
+    `static.glossgenius.com` and a deep link straight to that service's
+    booking page on `kyiadalton.glossgenius.com/book?service_token=...`.
+    Unlike the old `media.base44.com` images, these are **not** self-hosted —
+    they're GlossGenius' own live service photos, so hotlinking them is the
+    correct choice (they'll stay in sync with whatever Kyia has configured in
+    GlossGenius). `public/_headers`' CSP `img-src` explicitly allows
+    `static.glossgenius.com` for this reason — don't remove that exception
+    unless `Services.jsx` no longer needs it.
 - **Google Fonts** — loaded via `<link>` tags in `index.html`, no API key.
 - **Facebook / Instagram** — plain outbound links from `siteConfig.facebookUrl`
   / `instagramUrl`, used in the Contact page and footer.
