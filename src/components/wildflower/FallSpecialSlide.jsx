@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import BookNowButton from "./BookNowButton";
 
-const FALL_IMAGE =
-  "https://media.base44.com/images/public/6a5255ae151d27a36fddeb7b/7bdfb80f2_CodexImageSep10202606_52_42PM.png";
+const FALL_IMAGE = "/images/fall-special.png";
 
 export default function FallSpecialSlide() {
   return (

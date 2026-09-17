@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { siteConfig } from "@/lib/siteConfig";
 
 export default function About({ aboutImage }) {
   return (

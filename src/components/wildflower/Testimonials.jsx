@@ -1,29 +1,8 @@
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
-import { base44 } from "@/api/base44Client";
+import { testimonials } from "@/data/testimonials";
 
 export default function Testimonials() {
-  const [testimonials, setTestimonials] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const load = async () => {
-      try {
-        const data = await base44.entities.Testimonial.list(
-          "display_order",
-          50
-        );
-        setTestimonials(data);
-      } catch (e) {
-        console.error("Failed to load testimonials:", e);
-      } finally {
-        setLoading(false);
-      }
-    };
-    load();
-  }, []);
-
   return (
     <section
       id="reviews"
@@ -42,11 +21,7 @@ export default function Testimonials() {
           </h2>
         </div>
 
-        {loading ? (
-          <div className="flex justify-center py-20">
-            <div className="w-8 h-8 border-2 border-peony border-t-terra rounded-full animate-spin" />
-          </div>
-        ) : testimonials.length === 0 ? (
+        {testimonials.length === 0 ? (
           <div className="text-center py-20">
             <p className="font-display text-2xl italic text-umber/40">
               Reviews blooming soon

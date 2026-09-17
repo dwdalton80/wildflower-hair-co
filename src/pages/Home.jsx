@@ -8,10 +8,8 @@ import Contact from "@/components/wildflower/Contact";
 import Footer from "@/components/wildflower/Footer";
 import StickyBookBar from "@/components/wildflower/StickyBookBar";
 
-const HERO_IMAGE =
-  "https://media.base44.com/images/public/6a5255ae151d27a36fddeb7b/9c7f7b38f_f1c67202-fac4-4a38-bb25-fdbfa9aebcfa.jpg";
-const ABOUT_IMAGE =
-  "https://media.base44.com/images/public/6a5255ae151d27a36fddeb7b/3ee757879_7E1F3E9C-F62B-41C3-8824-7CE095C65277.png";
+const HERO_IMAGE = "/images/hero.jpg";
+const ABOUT_IMAGE = "/images/about.png";
 
 export default function Home() {
   return (

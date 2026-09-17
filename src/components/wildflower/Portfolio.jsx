@@ -1,30 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
-import { base44 } from "@/api/base44Client";
+import { portfolioImages } from "@/data/portfolioImages";
 
 export default function Portfolio() {
-  const [images, setImages] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const images = portfolioImages;
   const [selected, setSelected] = useState(null);
   const [revealing, setRevealing] = useState(false);
-
-  useEffect(() => {
-    const load = async () => {
-      try {
-        const data = await base44.entities.PortfolioImage.list(
-          "display_order",
-          50
-        );
-        setImages(data);
-      } catch (e) {
-        console.error("Failed to load portfolio:", e);
-      } finally {
-        setLoading(false);
-      }
-    };
-    load();
-  }, []);
 
   return (
     <section
@@ -45,11 +27,7 @@ export default function Portfolio() {
           </h2>
         </div>
 
-        {loading ? (
-          <div className="flex justify-center py-20">
-            <div className="w-8 h-8 border-2 border-peony border-t-terra rounded-full animate-spin" />
-          </div>
-        ) : images.length === 0 ? (
+        {images.length === 0 ? (
           <div className="text-center py-20">
             <p className="font-display text-2xl italic text-umber/40">
               Portfolio coming soon

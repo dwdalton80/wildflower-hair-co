@@ -1,7 +1,7 @@
 export const siteConfig = {
   brandName: "Wildflower Hair Co.",
   stylistName: "Kyia",
-  logoUrl: "https://media.base44.com/images/public/6a5255ae151d27a36fddeb7b/ce3f36301_IMG_5258.jpg",
+  logoUrl: "/images/logo.jpg",
   tagline: "Rooted in grace. Blooming in beauty.",
   subTagline: "Your hair, but wilder.",
   bookingUrl: "https://kyiadalton.glossgenius.com/services",

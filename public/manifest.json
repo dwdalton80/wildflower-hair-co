@@ -1,0 +1,15 @@
+{
+  "name": "Wildflower Hair Co. By Kyia",
+  "short_name": "Wildflower Hair Co.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F9F5F0",
+  "theme_color": "#2E97B5",
+  "icons": [
+    {
+      "src": "/images/logo.jpg",
+      "sizes": "1024x1024",
+      "type": "image/jpeg"
+    }
+  ]
+}
